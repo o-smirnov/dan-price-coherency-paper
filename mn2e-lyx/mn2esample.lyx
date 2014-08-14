@@ -1,0 +1,5804 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass mn2e
+\begin_preamble
+% mn2esample.tex
+%
+% v2.1 released 22nd May 2002 (G. Hutton)
+%
+% The mnsample.tex file has been amended to highlight
+% the proper use of LaTeX2e code with the class file
+% and using natbib cross-referencing. These changes
+% do not reflect the original paper by A. V. Raveendran.
+%
+% Previous versions of this sample document were
+% compatible with the LaTeX 2.09 style file mn.sty
+% v1.2 released 5th September 1994 (M. Reed)
+% v1.1 released 18th July 1994
+% v1.0 released 28th January 1994
+
+
+
+% If your system does not have the AMS fonts version 2.0 installed, then
+% remove the useAMS option.
+%
+% useAMS allows you to obtain upright Greek characters.
+% e.g. \umu, \upi etc.  See the section on "Upright Greek characters" in
+% this guide for further information.
+%
+% If you are using AMS 2.0 fonts, bold math letters/symbols are available
+% at a larger range of sizes for NFSS release 1 and 2 (using \boldmath or
+% preferably \bmath).
+%
+% The usenatbib command allows the use of Patrick Daly's natbib.sty for
+% cross-referencing.
+%
+% If you wish to typeset the paper in Times font (if you do not have the
+% PostScript Type 1 Computer Modern fonts you will need to do this to get
+% smoother fonts in a PDF file) then uncomment the next line
+% \usepackage{Times}
+
+%%%%% AUTHORS - PLACE YOUR OWN MACROS HERE %%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Dust envelopes around RV Tauri stars]{Dust envelopes around RV Tauri stars}
+\author[A. V. Raveendran and A. N. Other]{A. V. Raveendran$^{1}$\thanks{E-mail:
+email@address (AVR); otheremail@otheraddress (ANO)} and A. N.
+Other$^{2}$\footnotemark[1]\thanks{This file has been amended to
+highlight the proper use of \LaTeXe\ code with the class file.
+These changes are for illustrative purposes and do not reflect the
+original paper by A. V. Raveendran.}\\
+$^{1}$Indian Institute of Astrophysics, Bangalore 560034, India\\
+$^{2}$Building, Institute, Street Address, City, Code, Country}
+\end_preamble
+\options useAMS,usenatbib
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Date
+Accepted 20XX .
+ Received 20XX
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagerange
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "firstpage"
+
+\end_inset
+
+--
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "lastpage"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pubyear
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+2012
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "firstpage"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+In the 
+\shape italic
+IRAS
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ [12]--[25], [25]--[60] colour--colour diagram, RV Tauri stars are found
+ to populate cooler temperature regions 
+\begin_inset Formula $(T<600\,\rmn{K})$
+\end_inset
+
+, distinctly different from those occupied by the oxygen and carbon Miras.
+ The 
+\shape italic
+IRAS
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ fluxes are consistent with the dust density in the envelope varying as
+ the inverse square of the radial distance, implying that the grain formation
+ processes in these objects are most probably continuous and not sporadic.
+ It is found that the spectroscopic subgroups A and B are well separated
+ in the far-infrared two-colour diagram, with group B objects having systematica
+lly cooler dust envelopes.
+ We interpret this as being due to a difference in the nature of grains,
+ including the chemical composition, in the two cases.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{keywords}
+\end_layout
+
+\end_inset
+
+ circumstellar matter -- infrared: stars.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{keywords}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+It has been well established that RV Tauri variables possess infrared emission
+ far in excess of their expected blackbody continuum, arising from their
+ extended cool dust envelopes 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b7,b5,b6}
+\end_layout
+
+\end_inset
+
+.
+ Recently, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b15}
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b9}
+\end_layout
+
+\end_inset
+
+ have given detailed descriptions of the near-infrared properties of RV
+ Tauri stars.
+ In this paper we present an analysis of the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ data of RV Tauri stars with the help of the far-infrared two-colour diagram
+ and a grid computed using a simple model of the dust envelope.
+ Such two-colour plots have already been employed extensively by several
+ investigators to study the circumstellar envelopes around oxygen-rich and
+ carbon-rich objects which are in the late stages of stellar evolution 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b10,b25,b23,b24}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Table 1 summarizes the basic data on the 17 objects detected at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+60
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Formula $\umu$
+\end_inset
+
+m
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+.
+ Apart from the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ identification and the flux densities at 12-, 25-, 60- and 100-
+\begin_inset Formula $\umu$
+\end_inset
+
+m wavebands, it gives the spectroscopic groups of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b20}
+\end_layout
+
+\end_inset
+
+, the light-curve classes of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b13}
+\end_layout
+
+\end_inset
+
+ and the periods of light variation.
+ The list, which contains about 20 per cent of all the known RV Tauri stars,
+ is essentially the same as that given by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b12}
+\end_layout
+
+\end_inset
+
+.
+ The spectroscopic subgroups are from either 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b20}
+\end_layout
+
+\end_inset
+
+ or 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b15}
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Float table
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "140mm"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Data on the RV Tauri stars detected by 
+\shape italic
+IRAS
+\shape default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="21" columns="10">
+<features tabularvalignment="middle">
+<column alignment="none" valignment="top" width="0" special="@{}l">
+<column alignment="left" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="none" valignment="top" width="0" special="r@{}">
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Flux density (Jy)
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Observed by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+em
+\end_layout
+
+\end_inset
+
+ IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Variable 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape italic
+IRAS
+\shape default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\begin_inset Formula $\,\umu$
+\end_inset
+
+m 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\begin_inset Formula $\,\umu$
+\end_inset
+
+m 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60
+\begin_inset Formula $\,\umu$
+\end_inset
+
+m 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\begin_inset Formula $\,\umu$
+\end_inset
+
+m 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sp.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Period 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Light- 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{0}\,(\rmn{K})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+group 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(d) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+curve 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+type 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TW Cam 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+04166
+\begin_inset Formula $+$
+\end_inset
+
+5719 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.27 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.62 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.82 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+1.73 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+85.6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+555 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RV Tau 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+04440
+\begin_inset Formula $+$
+\end_inset
+
+2605 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+22.53 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.08 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.40 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.52 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+78.9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+460 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DY Ori 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+06034
+\begin_inset Formula $+$
+\end_inset
+
+1354 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.44 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14.93 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.12 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+11.22 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60.3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+295 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CT Ori 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+06072
+\begin_inset Formula $+$
+\end_inset
+
+0953 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.16 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.57 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.22 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+1.54 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+135.6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+330 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SU Gem 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+06108
+\begin_inset Formula $+$
+\end_inset
+
+2734 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.90 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.69 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.16 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+11.66 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+575 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+UY CMa 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+06160
+\begin_inset Formula $-$
+\end_inset
+
+1701 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.51 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.48 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.57 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+1.00 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+113.9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+420 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U Mon 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+07284
+\begin_inset Formula $-$
+\end_inset
+
+0940 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+124.30 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+88.43 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26.28 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.24 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+92.3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+480 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AR Pup 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+08011
+\begin_inset Formula $-$
+\end_inset
+
+3627 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+131.33 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+94.32 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25.81 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.65 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+75.0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+450 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IW Car 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+09256
+\begin_inset Formula $-$
+\end_inset
+
+6324 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+101/06 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+96.24 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+34.19 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13.07 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+67.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+395 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GK Car 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11118
+\begin_inset Formula $-$
+\end_inset
+
+5726 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.87 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.48 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.78 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+12.13 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+55.6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+405 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RU Cen 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12067
+\begin_inset Formula $-$
+\end_inset
+
+4508 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.36 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.02 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.57 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64.7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+255 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SX Cen 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12185
+\begin_inset Formula $-$
+\end_inset
+
+4856 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.95 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.62 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.09 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+1.50 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32.9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+590 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AI Sco 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17530
+\begin_inset Formula $-$
+\end_inset
+
+3348 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17.68 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.46 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.88 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+45.62 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71.0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+480 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AC Her 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18281
+\begin_inset Formula $+$
+\end_inset
+
+2149 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41.47 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+65.33 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21.12 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.79 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+75.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+260 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R Sct 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18448
+\begin_inset Formula $-$
+\end_inset
+
+0545 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20.88 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.30 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.10 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+138.78 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+140.2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R Sge 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20117
+\begin_inset Formula $+$
+\end_inset
+
+1634 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.63 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.57 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.10 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+1.66 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70.6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+455 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V Vul 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20343
+\begin_inset Formula $+$
+\end_inset
+
+2625 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.39 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.72 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.29 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<$
+\end_inset
+
+6.96 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+75.7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+690
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset Argument
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Description of the Envelope
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+Model
+\end_layout
+
+\begin_layout Standard
+If we assume that the dust grains in the envelope are predominantly of the
+ same kind and are in thermal equilibrium, the luminosity at frequency 
+\begin_inset Formula $\nu$
+\end_inset
+
+ in the infrared is given by 
+\begin_inset Formula 
+\begin{equation}
+L(\nu)=\mskip-12mu\int\limits _{\rmn{envelope}}\mskip-12mu\rho(r)Q_{\rmn{abs}}(\nu)B[\nu,T_{\rmn{g}}(r)]\exp[-\tau(\nu,r)]\>\rmn{d}V,
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $Q_{\rmn{abs}}(\nu)$
+\end_inset
+
+ is the absorption efficiency at frequency 
+\begin_inset Formula $\nu$
+\end_inset
+
+, 
+\begin_inset Formula $\rho(r)$
+\end_inset
+
+ is the dust grain density, 
+\begin_inset Formula $T_{\rmn{g}}(\nu)$
+\end_inset
+
+ is the grain temperature, 
+\begin_inset Formula $B[\nu,T_{\rmn{g}}(r)]$
+\end_inset
+
+ is the Planck function, and 
+\begin_inset Formula $\tau(\nu,r)$
+\end_inset
+
+ is the optical depth at distance 
+\shape italic
+r
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ from the centre of the star.
+\end_layout
+
+\begin_layout Standard
+The temperature 
+\begin_inset Formula $T_{\rmn{g}}(r)$
+\end_inset
+
+ is determined by the condition of energy balance: amount of energy radiated
+ = amount of energy absorbed.
+ The amount of energy absorbed at any point is proportional to the total
+ available energy at that point, which consists of: 
+\end_layout
+
+\begin_layout Enumerate
+the attenuated and diluted stellar radiation; 
+\end_layout
+
+\begin_layout Enumerate
+scattered radiation, and 
+\end_layout
+
+\begin_layout Enumerate
+reradiation from other grains.
+ 
+\end_layout
+
+\begin_layout Standard
+Detailed solutions of radiative transfer in circumstellar dust shells by
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b21,b22}
+\end_layout
+
+\end_inset
+
+ indicate that the effect of heating by other grains becomes significant
+ only at large optical depths at the absorbing frequencies 
+\begin_inset Formula $[\tau(\rmn{UV})\gg10]$
+\end_inset
+
+, and at optical depths 
+\begin_inset Formula $\tau(\rmn{UV})<1$
+\end_inset
+
+ the grains have approximately the same temperature that they would have
+ if they were seeing the starlight unattenuated and no other radiation.
+\end_layout
+
+\begin_layout Standard
+The Planck mean optical depths of circumstellar envelopes around several
+ RV Tauri stars, derived from the ratios of the luminosities of the dust
+ shell (at infrared wavelengths) and the star, range from 0.07 to 0.63 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b9}
+\end_layout
+
+\end_inset
+
+.
+ There is much uncertainty in the nature of the optical properties of dust
+ grains in the envelope.
+ The carbon-rich RV Tauri stars are also reported to show the 10-
+\begin_inset Formula $\umu$
+\end_inset
+
+m silicate emission feature typical of oxygen-rich objects 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b6,b19}
+\end_layout
+
+\end_inset
+
+.
+ The pure terrestrial silicates or lunar silicates are found to be completely
+ unsuitable to account for the infrared emission from circumstellar dust
+ shells around M-type stars 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b21}
+\end_layout
+
+\end_inset
+
+.
+ We assume that the absorption efficiency 
+\begin_inset Formula $Q_{\rmn{abs}}(\nu)$
+\end_inset
+
+ in the infrared varies as 
+\begin_inset Formula $\nu^{\gamma}$
+\end_inset
+
+.
+ 
+\begin_inset Formula ${\gamma}=1$
+\end_inset
+
+ appears to provide a reasonable fit in a variety of sources 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep*{b11,b12}
+\end_layout
+
+\end_inset
+
+.
+ Under these circumstances the condition of energy balance implies that
+ the dust temperature 
+\begin_inset Formula $T_{\rmn{g}}$
+\end_inset
+
+ will vary as 
+\begin_inset Formula $r^{\beta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In view of the low value of the observed Planck mean optical depth for the
+ stellar radiation and the nature of the assumed frequency dependence of
+ the absorption efficiency, the extinction of the infrared radiation by
+ the dust envelope can be neglected.
+ If we consider the envelope to be spherically symmetric, equation (1) reduces
+ to 
+\begin_inset Formula 
+\begin{equation}
+L(\nu)=\!\!\int_{r_{1}}^{r_{2}}\!\!4\upi r^{2}\rho(r)\>Q_{\rmn{abs}}(\nu)B[\nu,T_{\rmn{g}}(r)]\>{\rmn{d}}r,
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+ are the inner and outer radii of the shell.
+ For a dusty density distribution 
+\begin_inset Formula $\rho(r)\propto r^{\alpha}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{2}\gg r_{1}$
+\end_inset
+
+, equation (2) reduces to 
+\begin_inset Formula 
+\begin{equation}
+L(\nu)\propto\nu^{2+\gamma-Q}\int_{X_{0}}^{\infty}\frac{{x^{Q}}}{{\rmn{e}^{x}-1}}\rmn{d}x,
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $Q=-(\alpha+\beta+3)/\beta$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{0}=(h\nu/kT_{0})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ represents the temperature at the inner boundary of the dust shell where
+ grains start condensing.
+ In a steady radiation pressure driven mass outflow in the optically thin
+ case, values of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ lie near 
+\begin_inset Formula $-2$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b8}
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ are related by 
+\begin_inset Formula $\beta=-2/(\gamma+4)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ Point Source Catalog 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep[PSC,]{b2}
+\end_layout
+
+\end_inset
+
+, the flux densities have been quoted at the effective wavelengths 12, 25,
+ 60 and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+100
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Formula $\umu$
+\end_inset
+
+m
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, assuming a flat energy spectrum 
+\begin_inset Formula $[\nu F(\nu)=1]$
+\end_inset
+
+ for the observed sources.
+ For each model given by equation (3), using the relative system response,
+ the colour-correction factors 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b3}
+\end_layout
+
+\end_inset
+
+ in each of the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ passbands were calculated and the fluxes were converted into flux densities
+ expected for a flat energy distribution, as assumed in the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ PSC, so that the computed colours can be directly compared with the colours
+ determined from the catalogue quantities.
+ Such a procedure is more appropriate than correcting the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ colours for the energy distribution given by a particular model and then
+ comparing them with those computed by the model.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+An example of a footnote.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Colour--colour diagram
+\end_layout
+
+\begin_layout Standard
+The IR colour is defined as 
+\begin_inset Formula 
+\[
+[\nu_{1}]-[\nu_{2}]=-2.5\log[f(\nu_{1})/f(\nu_{2})],
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\nu_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\nu_{2}$
+\end_inset
+
+ are any two wavebands and 
+\begin_inset Formula $f(\nu_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $f(\nu_{2})$
+\end_inset
+
+ are the corresponding flux densities assuming a flat energy spectrum for
+ the source.
+ In Fig.
+\begin_inset space ~
+\end_inset
+
+1, we have plotted the [25]--[60] colours of RV Tauri stars against their
+ corresponding [12]--[25] colours derived from the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ data.
+ Filled circles represent stars of group A and open circles stars of group
+ B.
+ The two sets of near-parallel lines represent the loci of constant inner
+ shell temperature 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ and the quantity 
+\begin_inset Formula $Q$
+\end_inset
+
+ defined above.
+ The models correspond to the case of absorption efficiency 
+\begin_inset Formula $Q_{\rmn{abs}}(\nu)$
+\end_inset
+
+ varying as 
+\begin_inset Formula $\nu$
+\end_inset
+
+ (with 
+\begin_inset Formula $\gamma=1$
+\end_inset
+
+ and hence 
+\begin_inset Formula $\beta=-0.4$
+\end_inset
+
+).
+ We have omitted R Sct in Fig.
+\begin_inset space ~
+\end_inset
+
+1 because it shows a large deviation from the average relation shown by
+ all the other objects.
+ R Sct has a comparatively large excess at 60
+\begin_inset Formula $\,\umu$
+\end_inset
+
+m, but the extent of a possible contamination by the infrared cirrus 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b16}
+\end_layout
+
+\end_inset
+
+ is unknown.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b9}
+\end_layout
+
+\end_inset
+
+ found no evidence of the presence of a dust envelope at near-IR wavelengths
+ and the spectrum was consistent with a stellar continuum.
+ This explains why R Sct lies well below the mean relation shown by stars
+ of groups A and C between the [3.6]--[11.3] colour excess and the photometrically
+ determined (Fe/H) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b4}
+\end_layout
+
+\end_inset
+
+.
+ R Sct has the longest period of 140
+\begin_inset Formula $\,$
+\end_inset
+
+d among the RV Tauri stars detected at far-infrared wavelengths and does
+ not have the 10-
+\begin_inset Formula $\umu$
+\end_inset
+
+m emission feature seen in other objects 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b5,b19}
+\end_layout
+
+\end_inset
+
+.
+ R Sct is probably the most irregular RV Tauri star known 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b17}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace 302pt
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Plot of [25]--[60] colours of RV Tauri stars against their [12]--[25] colours
+ after normalizing as indicated in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b3}
+\end_layout
+
+\end_inset
+
+.
+ Some of the objects are identified by their variable-star names.
+ Typical error bars are shown in the bottom right-hand corner.
+ The lines represent the loci for constant inner shell temperature and the
+ quantity 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ Note the separation of group A and B stars at 
+\begin_inset Formula $T_{0}\sim$
+\end_inset
+
+ 460
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+K.
+ Positions occupied by a sample of carbon and oxygen Miras are also shown.
+ The 
+\begin_inset Formula $Q=1.0$
+\end_inset
+
+ line differs from the blackbody line by a maximum of 
+\begin_inset Formula $\sim0.05$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The inner shell temperatures 
+\begin_inset Formula $(T_{0})$
+\end_inset
+
+ derived for the various objects are also given in Table
+\begin_inset space ~
+\end_inset
+
+1 and we find the majority of them to have temperatures in the narrow range
+ 400--600
+\begin_inset Formula $\,$
+\end_inset
+
+K.
+ If the dependences of 
+\begin_inset Formula $Q_{\rmn{abs}}(\nu)$
+\end_inset
+
+ on 
+\begin_inset Formula $\nu$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho(r)$
+\end_inset
+
+ on 
+\begin_inset Formula $r$
+\end_inset
+
+ are similar in all the objects considered, then in the colour--colour diagram
+ they all should lie along a line corresponding to different values of 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ and in Fig.
+\begin_inset space ~
+\end_inset
+
+1 we find that this is essentially the case.
+ In view of the quoted uncertainties in the flux measurements, we cannot
+ attach much significance to the scatter in Fig.
+\begin_inset space ~
+\end_inset
+
+1.
+\end_layout
+
+\begin_layout Standard
+At 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+100
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Formula $\umu$
+\end_inset
+
+m
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ the infrared sky is characterized by emission, called infrared cirrus,
+ from interstellar dust on all spatial scales 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b16}
+\end_layout
+
+\end_inset
+
+, thereby impairing the measurements at far-infrared wavelengths.
+ In Fig.
+\begin_inset space ~
+\end_inset
+
+2, we have plotted the [60]--[100] colours of the six RV Tauri stars detected
+ at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+100
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Formula $\umu$
+\end_inset
+
+m
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ against their [25]--[60] colours, along with the grid showing the regions
+ of different values for inner shell temperature 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ and the quantity 
+\begin_inset Formula $Q$
+\end_inset
+
+, as in Fig.
+\begin_inset space ~
+\end_inset
+
+1.
+ The results indicated by Fig.
+\begin_inset space ~
+\end_inset
+
+2 are consistent with those derived from Fig.
+\begin_inset space ~
+\end_inset
+
+1.
+ AR Pup shows a large excess at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+100
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Formula $\umu$
+\end_inset
+
+m
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ but, in view of the large values for the cirrus flags given in the catalogue,
+ the intrinsic flux at 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbox
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+100
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Formula $\umu$
+\end_inset
+
+m
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ is uncertain.
+\end_layout
+
+\begin_layout Subsection
+Radial distribution of dust
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace 174pt*
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Plot of the [60]--[100] colours of RV Tauri stars against their [25]--[60]
+ colours after normalizing as indicated in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b3}
+\end_layout
+
+\end_inset
+
+.
+ The solid lines represent the loci for constant inner shell temperature
+ and the quantity 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ The dashed line shows the locus for a blackbody distribution.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From Fig.
+\begin_inset space ~
+\end_inset
+
+1, it is evident that all RV Tauri stars lie between the lines corresponding
+ to 
+\begin_inset Formula $Q=1.5$
+\end_inset
+
+ and 0.5.
+ With 
+\begin_inset Formula 
+\[
+\alpha=-(1+Q)\beta-3,
+\]
+
+\end_inset
+
+ these values suggest limits of 
+\begin_inset Formula $r^{-2.0}$
+\end_inset
+
+ and 
+\begin_inset Formula $r^{-2.4}$
+\end_inset
+
+ for the dust density variation, indicating a near-constant mass-loss rate.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b12}
+\end_layout
+
+\end_inset
+
+ has suggested that the density in the circumstellar envelope around RV
+ Tauri stars varies as 
+\begin_inset Formula $r^{-1}$
+\end_inset
+
+, implying a mass-loss rate that was greater in the past than it is currently.
+ By fitting a power law to the observed fluxes, such that 
+\begin_inset Formula $f(\nu)$
+\end_inset
+
+ varies as 
+\begin_inset Formula $\nu^{q}$
+\end_inset
+
+, values of 
+\begin_inset Formula $q$
+\end_inset
+
+ determined by him for the various objects given in Table
+\begin_inset space ~
+\end_inset
+
+1 lie in the range 0.6--1.2, with a mean 
+\begin_inset Formula $\skew5\bar{q}=0.98$
+\end_inset
+
+.
+ The assumption of a power law corresponds to the case of 
+\begin_inset Formula $X_{0}=0$
+\end_inset
+
+ in equation (3) and hence we get 
+\begin_inset Formula 
+\[
+q=2+\gamma-Q.
+\]
+
+\end_inset
+
+ Since we assume that 
+\begin_inset Formula $Q_{\rmn{abs}}(\nu)$
+\end_inset
+
+ varies as 
+\begin_inset Formula $\nu$
+\end_inset
+
+, the resulting value for 
+\begin_inset Formula $Q$
+\end_inset
+
+=2.0.
+ None of the objects is found to lie in the corresponding region in the
+ colour--colour diagram.
+ Even this extreme value for 
+\begin_inset Formula $Q$
+\end_inset
+
+ implies a density which varies as 
+\begin_inset Formula $r^{-1.8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b9}
+\end_layout
+
+\end_inset
+
+ have reported that the simultaneous optical and near-IR data of AC Her
+ can be fitted by a combination of two blackbodies at 5680 and 1800
+\begin_inset space \thinspace{}
+\end_inset
+
+K, representing, respectively, the stellar and dust shell temperatures,
+ and suggested that in RV Tauri stars the grain formation is a sporadic
+ phenomenon and not a continuous process.
+ Apparently, they have been influenced by the remark by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b7}
+\end_layout
+
+\end_inset
+
+ that their data in the 3.5--11
+\begin_inset Formula $\,\umu$
+\end_inset
+
+m region of AC Her indicated a dust temperature of 
+\begin_inset Formula $\sim$
+\end_inset
+
+300
+\begin_inset space \thinspace{}
+\end_inset
+
+K.
+ We find that the 
+\shape italic
+K--L
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ colours given by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b5}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b15}
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b9}
+\end_layout
+
+\end_inset
+
+ are all consistent with each other.
+ Surely, hot dust (
+\begin_inset Formula $\sim1800\,$
+\end_inset
+
+K), if present at the time of observations by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b9}
+\end_layout
+
+\end_inset
+
+, would have affected the 
+\shape italic
+K--L
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ colour significantly.
+ AC Her, like other members of its class, is found to execute elongated
+ loops in the (
+\shape italic
+U--B
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+), (
+\shape italic
+B--V
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+) plane 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b20}
+\end_layout
+
+\end_inset
+
+, indicating that significant departure of the stellar continuum from the
+ blackbody is to be expected.
+ Further, their data show only a marginal excess at the near-IR wavelengths.
+ We feel that the case for the existence of hot dust around AC Her and hence
+ for the sporadic grain formation around RV Tauri stars is not strong.
+ In Fig.
+\begin_inset space ~
+\end_inset
+
+3 we find that AC Her and RU Cen lie very close to R Sct which, according
+ to 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b9}
+\end_layout
+
+\end_inset
+
+, shows no evidence for the presence of a hot dust envelope.
+\end_layout
+
+\begin_layout Subsubsection
+Comparison with oxygen and carbon Miras
+\end_layout
+
+\begin_layout Standard
+In Fig.
+\begin_inset space ~
+\end_inset
+
+1 we have also shown the positions of a sample of oxygen-rich and carbon-rich
+ Miras.
+ At the low temperatures characteristic of the Miras, a part of the emission
+ at 12
+\begin_inset Formula $\,\umu$
+\end_inset
+
+m comes from the photosphere.
+ For a blackbody at 2000
+\begin_inset Formula $\,$
+\end_inset
+
+K, the ratio of fluxes at wavelengths of 12 and 2
+\begin_inset Formula $\,\umu$
+\end_inset
+
+m 
+\begin_inset Formula $(f_{12}/f_{2})\sim0.18$
+\end_inset
+
+.
+ The Miras shown in Fig.
+\begin_inset space ~
+\end_inset
+
+1 have 
+\begin_inset Formula $(f_{12}/f_{2})$
+\end_inset
+
+ ratios larger than twice the above value.
+ It is clear that the three groups of objects populate three different regions
+ of the diagram.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b10}
+\end_layout
+
+\end_inset
+
+ have already noticed that there are distinct differences between the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ colours of oxygen-rich and carbon-rich objects.
+ On the basis of an analysis, using a bigger sample of bright giant stars
+ in the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ catalogue, this has been interpreted by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b25}
+\end_layout
+
+\end_inset
+
+ as being due to a systematic difference in the dust grain emissivity index.
+ U Mon shows the 10-
+\begin_inset Formula $\umu$
+\end_inset
+
+m silicate emission convincingly and, in most of the other objects for which
+ low-resolution spectra in the near-infrared have been reported 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b5,b19}
+\end_layout
+
+\end_inset
+
+, the 10-
+\begin_inset Formula $\umu$
+\end_inset
+
+m emission may be partly attributed to silicates.
+ Hence it is reasonable to expect that, in the envelopes around at least
+ some of the RV Tauri stars, the dust grains are predominantly of silicates,
+ as in the case of oxygen Miras 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b21}
+\end_layout
+
+\end_inset
+
+.
+ The fact that none of the RV Tauri stars is found in the region of the
+ two-colour diagram occupied by the oxygen Miras indicates that the emissivity
+ indices of the silicate grains in the two cases are different.
+ Because of the higher temperatures and luminosities, the environment of
+ grain formation will be different in RV Tauri stars.
+\end_layout
+
+\begin_layout Subsubsection
+Correlation with subgroups
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b20}
+\end_layout
+
+\end_inset
+
+ have identified three spectroscopic subgroups, which are designated as
+ groups A, B and C.
+ Objects of group A are metal-rich; group C are metal-poor; group B objects
+ are also metal-poor, but show carbon enhancements 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b20,b14,b4,b1}
+\end_layout
+
+\end_inset
+
+.
+ It is interesting to see that Table
+\begin_inset space ~
+\end_inset
+
+1 contains no group C objects and that in Fig.
+\begin_inset space ~
+\end_inset
+
+1 there is a clear separation of the two spectroscopic subgroups A and B,
+ with the demarcation occurring at an inner shell temperature of about 450
+\begin_inset Formula $\,$
+\end_inset
+
+K, group B stars having lower temperatures than group A.
+ SX Cen is the only exception.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b14}
+\end_layout
+
+\end_inset
+
+ has reported that metal lines are stronger in SX Cen than in other group
+ B objects.
+ It may be worth noting that SX Cen has the shortest period among the 100
+ or so objects with the RV Tauri classification.
+ RU Cen has the coolest inner shell temperature, as already suggested by
+ the near-infrared spectrum 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b6}
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace 174pt*
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Plot of (
+\shape italic
+K--L
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+) colours of RV Tauri stars detected by 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ against their corresponding (
+\shape italic
+J--K
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+) colours.
+ The position of AR Pup is indicated.
+ The three objects lying close to the blackbody line are AC Her, RU Cen
+ and R Sct.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Group B objects follow a different mean relationship from those of group
+ A, having systematically larger 11-
+\begin_inset Formula $\umu$
+\end_inset
+
+m excess for a given excess at 3
+\begin_inset Formula $\,\umu$
+\end_inset
+
+m 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b15}
+\end_layout
+
+\end_inset
+
+.
+ For a general sample of RV Tauri stars, the distinction between the oxygen-rich
+ and carbon-rich objects is not that apparent in the 
+\shape italic
+JHKL
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ bands.
+ In Fig.
+\begin_inset space ~
+\end_inset
+
+3 we have plotted the near-IR magnitudes of the objects given in Table
+\begin_inset space ~
+\end_inset
+
+1 (except V Vul which has no available measurements) in the 
+\shape italic
+J--K, K--L
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ plane.
+ The colours, taken from 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b15}
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b9}
+\end_layout
+
+\end_inset
+
+, are averaged if more than one observation exists, because the internal
+ agreements are found to be often of the order of observational uncertainties,
+ in accordance with the earlier finding by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b5}
+\end_layout
+
+\end_inset
+
+ that variability has relatively little effect on colours.
+ Barring RU Cen and AC Her, it is evident that stars belonging to group
+ B show systematically larger excesses at 
+\shape italic
+L
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ band for a given excess at 
+\shape italic
+K
+\shape default
+.
+ The low excesses at near-IR wavelengths for AC Her and RU Cen are consistent
+ with the very low dust temperatures indicated by the far-infrared colours.
+ 
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+vbox
+\end_layout
+
+\end_inset
+
+ to 220mm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfil
+\end_layout
+
+\end_inset
+
+ Landscape figure to go here.
+ This figure was not part of the original paper and is inserted here for
+ illustrative purposes.
+\begin_inset Newline newline
+\end_inset
+
+ See the author guide for details (section 2.2 of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|mn2eguide.tex|
+\end_layout
+
+\end_inset
+
+) on how to handle landscape figures or tables.
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfil
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "landfig"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is already well established that from 
+\shape italic
+UBV
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ photometry one can distinguish between groups A and B, members of group
+ A being significantly redder than those of group B 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b20}
+\end_layout
+
+\end_inset
+
+.
+ Similarly, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b4}
+\end_layout
+
+\end_inset
+
+ has found that the two spectroscopic groups are well separated in the DDO
+ colour--colour diagrams when mean colours are used for the individual objects.
+\end_layout
+
+\begin_layout Standard
+The clear separation of the spectroscopic subgroups A and B in the IR two-colour
+ diagram suggests that the natures of dust grains in the envelopes in the
+ two cases are not identical.
+ This is to be expected because of the differences in the physical properties
+ of the stars themselves.
+ The average colours of group B stars are bluer than group A, but the envelope
+ dust temperatures of B are cooler than those of A.
+ The near-IR spectra of AC Her and RU Cen are extremely similar 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b6}
+\end_layout
+
+\end_inset
+
+.
+ The striking similarities in the optical spectra of AC Her and RU Cen have
+ been pointed out by Bidelman 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{b18}
+\end_layout
+
+\end_inset
+
+.
+ We feel that the physical properties, including the chemical composition,
+ of the grains formed in the circumstellar envelope strongly depend on those
+ of the embedded star.
+ This, probably, explains the diversity of the energy distributions of RV
+ Tauri stars in the near-infrared found by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b6}
+\end_layout
+
+\end_inset
+
+.
+ On the basis of the observed differences in chemical abundances and space
+ distribution of RV Tauri stars, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b15}
+\end_layout
+
+\end_inset
+
+ has already pointed out that there is no direct evolutionary connection
+ between group A and group B objects, thus ruling out the possibility that
+ group B objects are the evolutionary successors of group A, in which grain
+ formation has stopped and the cooler temperatures for the former are caused
+ by an envelope expansion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b13}
+\end_layout
+
+\end_inset
+
+ have subdivided RV Tauri stars into two classes, RVa and RVb, on the basis
+ of their light curves; the former shows a constant mean brightness, whereas
+ the latter shows a cyclically varying mean brightness.
+ Extensive observations in the near-infrared show that, on average, RVb
+ stars are redder than RVa stars, and 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b15}
+\end_layout
+
+\end_inset
+
+ has suggested that in RVb stars dust shells are denser in the inner regions
+ and hence radiate strongly in the 1--3
+\begin_inset Formula $\,\umu$
+\end_inset
+
+m region.
+ Fig.
+\begin_inset space ~
+\end_inset
+
+3 confirms this; RVb objects show systematically larger (
+\shape italic
+J--K
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+) and (
+\shape italic
+K--L
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+) colours than RVa objects.
+ Apparently, there is no distinction between objects of the two light-curve
+ types at far-infrared wavelengths (Fig.
+\begin_inset space ~
+\end_inset
+
+1).
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+In the [12]--[25], [25]--[60] colour diagram, RV Tauri stars populate cooler
+ temperature regions 
+\begin_inset Formula $(T<600\,\rmn{K})$
+\end_inset
+
+, distinctly different from those occupied by the oxygen and carbon Miras.
+ Using a simple model in which 
+\end_layout
+
+\begin_layout Enumerate
+the envelope is spherically symmetric, 
+\end_layout
+
+\begin_layout Enumerate
+the IR-emitting grains are predominantly of the same kind, and 
+\end_layout
+
+\begin_layout Enumerate
+in the infrared the absorption efficiency 
+\begin_inset Formula $Q_{\rmn{abs}}(\nu)\propto\nu$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+we find that the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ fluxes are consistent with the density in the envelope 
+\begin_inset Formula $\rho(r)\propto r^{-2}$
+\end_inset
+
+, where 
+\shape italic
+r
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ is the radial distance.
+ Such a dependence for the dust density implies that the mass-loss rates
+ in RV Tauri stars have not reduced considerably during the recent past,
+ contrary to the suggestion by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b12}
+\end_layout
+
+\end_inset
+
+.
+ In the two-colour diagram, the blackbody line and the line corresponding
+ to 
+\begin_inset Formula $\rho(r)\propto r^{-2.2}$
+\end_inset
+
+ nearly overlap and the present data are insufficient to resolve between
+ the two cases.
+ The latter case is more physically reasonable, however.
+\end_layout
+
+\begin_layout Standard
+The spectroscopic subgroups A and B are well separated in the 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ two-colour diagram, with group B objects having systematically cooler dust
+ envelopes.
+ If we consider only the objects detected by 
+\shape italic
+IRAS
+\shape default
+, we find that stars belonging to group B show systematically larger excess
+ at 
+\shape italic
+L
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ band for a given excess at 
+\shape italic
+K
+\shape default
+.
+ Apparently, there is no correlation between the light-curve types (RVa
+ and RVb) and the far-infrared behaviour of these objects.
+ It is fairly certain that the physical properties, including the chemical
+ composition, of the embedded stars are directly reflected by those of the
+ dust grains.
+ Most probably, the grain formation process in RV Tauri stars is continuous
+ and not sporadic as suggested by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b9}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Acknowledgments
+\end_layout
+
+\begin_layout Standard
+I thank Professor N.
+ Kameswara Rao for some helpful suggestions, Dr H.
+ C.
+ Bhatt for a critical reading of the original version of the paper and an
+ anonymous referee for very useful comments that improved the presentation
+ of the paper.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Baird}{1981}"
+key "b1"
+
+\end_inset
+
+ Baird S.R., 1981, ApJ, 245, 208 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Beichman et al.}{1985a}"
+key "b2"
+
+\end_inset
+
+ Beichman C.A., Neugebauer G., Habing H.J., Clegg P.E., Chester T.J., 1985a, 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ Point Source Catalog.
+ Jet Propulsion Laboratory, Pasadena 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Beichman et al.}{1985b}"
+key "b3"
+
+\end_inset
+
+ Beichman C.A., Neugebauer G., Habing H.J., Clegg P.E., Chester T.J., 1985b, 
+\shape italic
+IRAS
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ Explanatory Supplement.
+ Jet Propulsion Laboratory, Pasadena 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Dawson}{1979}"
+key "b4"
+
+\end_inset
+
+ Dawson D.W., 1979, ApJS, 41, 97 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Gerhz}{1972}"
+key "b5"
+
+\end_inset
+
+ Gerhz R.D., 1972, ApJ, 178, 715 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Gerhz \\& Ney}{1972}"
+key "b6"
+
+\end_inset
+
+ Gerhz R.D., Ney E.P., 1972, PASP, 84, 768 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Gerhz \\& Woolf}{1970}"
+key "b7"
+
+\end_inset
+
+ Gerhz R.D., Woolf N.J., 1970, ApJ, 161, L213 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Gilman}{1972}"
+key "b8"
+
+\end_inset
+
+ Gilman R.C., 1972, ApJ, 178, 423 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Goldsmith et al.}{1987}"
+key "b9"
+
+\end_inset
+
+ Goldsmith M.J., Evans A., Albinson J.S., Bode M.F., 1987, MNRAS, 227, 143 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Hacking et al.}{1985}"
+key "b10"
+
+\end_inset
+
+ Hacking P.
+ et al., 1985, PASP, 97, 616 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Harvey, Thronson \\& Gatley}{Harvey et al.}{1979}"
+key "b11"
+
+\end_inset
+
+ Harvey P.M., Thronson H.A., Gatley I., 1979, ApJ, 231, 115 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Jura}{1986}"
+key "b12"
+
+\end_inset
+
+ Jura M., 1986, ApJ, 309, 732 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Kukarkin et al.}{1969}"
+key "b13"
+
+\end_inset
+
+ Kukarkin B.V.
+ et al., 1969, General Catalogue of Variable Stars.
+ Moscow 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Lloyd Evans}{1974}"
+key "b14"
+
+\end_inset
+
+ Lloyd Evans T., 1974, MNRAS, 167, 17
+\shape smallcaps
+p
+\shape default
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Lloyd Evans}{1985}"
+key "b15"
+
+\end_inset
+
+ Lloyd Evans T., 1985, MNRAS, 217, 493 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Low et al.}{1984}"
+key "b16"
+
+\end_inset
+
+ Low F.J.
+ et al., 1984, ApJ, 278, L19 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{McLaughlin}{1932}"
+key "b17"
+
+\end_inset
+
+ McLaughlin D.B., 1932, Publ.
+ Univ.
+ Obs.
+ Mich., 4, 135 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{O'Connell}{1961}"
+key "b18"
+
+\end_inset
+
+ O'Connell J.K., 1961, Specola Vaticana Ric.
+ Astron., 6, 341 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Olnon \\& Raimond}{1986}"
+key "b19"
+
+\end_inset
+
+ Olnon F.M., Raimond E., 1986, A&AS, 65, 607 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Preston et al.}{1963}"
+key "b20"
+
+\end_inset
+
+ Preston G.W., Krzeminski W., Smak J., Williams J.A., 1963, ApJ, 137, 401 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Rowan-Robinson \\& Harris}{1983a}"
+key "b21"
+
+\end_inset
+
+ Rowan-Robinson M., Harris S., 1983a, MNRAS, 202, 767 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Rowan-Robinson \\& Harris}{1983b}"
+key "b22"
+
+\end_inset
+
+ Rowan-Robinson M., Harris S., 1983b, MNRAS, 202, 797 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{van der Veen \\& Habing}{1988}"
+key "b23"
+
+\end_inset
+
+ van der Veen W.E.C.J., Habing H.J., 1988, A&A, 194, 125 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Willems \\& de Jong}{1988}"
+key "b24"
+
+\end_inset
+
+ Willems F.J., de Jong T., 1988, A&A, 196, 173 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "\\protect\\citeauthoryear{Zuckerman \\& Dyck}{1986}"
+key "b25"
+
+\end_inset
+
+ Zuckerman B., Dyck H.M., 1986, ApJ, 311, 345 
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%dummy comment inserted by tex2lyx to ensure that this paragraph is not
+ empty
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset Argument
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Large gaps in L
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+lowercase
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+y
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${\balpha}$
+\end_inset
+
+ forests
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+*
+\end_layout
+
+\end_inset
+
+due to fluctuations in line distribution
+\end_layout
+
+\begin_layout Standard
+(This appendix was not part of the original paper by A.V.
+\begin_inset space ~
+\end_inset
+
+Raveendran and is included here just for illustrative purposes.
+ The references are not relevant to the text of the appendix, they are reference
+s from the bibliography used to illustrate text before and after citations.)
+\end_layout
+
+\begin_layout Standard
+Spectroscopic observations of bright quasars show that the mean number density
+ of Ly
+\begin_inset Formula $\alpha$
+\end_inset
+
+ forest lines, which satisfy certain criteria, evolves like 
+\begin_inset Formula $\rmn{d}N/\rmn{d}z=A(1+z)^{\gamma}$
+\end_inset
+
+, where 
+\begin_inset Formula $A$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\gamma$
+\end_inset
+
+ are two constants.
+ Given the above intrinsic line distribution we examine the probability
+ of finding large gaps in the Ly
+\begin_inset Formula $\alpha$
+\end_inset
+
+ forests.
+ We concentrate here only on the statistics and neglect all observational
+ complications such as the line blending effect 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep[see][for example]{b11}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Suppose we have observed a Ly
+\begin_inset Formula $\alpha$
+\end_inset
+
+ forest between redshifts 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ and found 
+\begin_inset Formula $N-1$
+\end_inset
+
+ lines.
+ For high-redshift quasars 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+is usually the emission redshift 
+\begin_inset Formula $z_{\rmn{em}}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ is set to 
+\begin_inset Formula $(\lambda_{\rmn{Ly}\beta}/\lambda_{\rmn{Ly}\alpha})(1+z_{\rmn{em}})=0.844(1+z_{\rmn{em}})$
+\end_inset
+
+ to avoid contamination by Ly
+\begin_inset Formula $\beta$
+\end_inset
+
+ lines.
+ We want to know whether the largest gaps observed in the forest are significant
+ly inconsistent with the above line distribution.
+ To do this we introduce a new variable
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+x=\frac{(1+z)^{\gamma+1}-(1+z_{1})^{\gamma+1}}{(1+z_{2})^{\gamma+1}-(1+z_{1})^{\gamma+1}}.
+\end{equation}
+
+\end_inset
+
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ varies from 0 to 1.
+ We then have 
+\begin_inset Formula $\rmn{d}N/\rmn{d}x=\lambda$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the mean number of lines between 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ and is given by 
+\begin_inset Formula 
+\begin{equation}
+\lambda\equiv\frac{A[(1+z_{2})^{\gamma+1}-(1+z_{1})^{\gamma+1}]}{\gamma+1}.
+\end{equation}
+
+\end_inset
+
+ This means that the Ly
+\begin_inset Formula $\alpha$
+\end_inset
+
+ forest lines are uniformly distributed in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x$
+\end_inset
+
+.
+ The probability of finding 
+\begin_inset Formula $N-1$
+\end_inset
+
+ lines between 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $z_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $P_{N-1}$
+\end_inset
+
+, is assumed to be the Poisson distribution.
+ 
+\begin_inset Newpage newpage
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace 11pc
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Formula $P(>x_{\rmn{gap}})$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $x_{\rmn{gap}}$
+\end_inset
+
+ for, from left to right, 
+\begin_inset Formula $N=160$
+\end_inset
+
+, 150, 140, 110, 100, 90, 50, 45 and
+\begin_inset space ~
+\end_inset
+
+40.
+ Compare this with 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet{b15}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "appenfig"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Subsection title
+\end_layout
+
+\begin_layout Standard
+We plot in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "appenfig"
+
+\end_inset
+
+ 
+\begin_inset Formula $P(>x_{\rmn{gap}})$
+\end_inset
+
+ for several 
+\begin_inset Formula $N$
+\end_inset
+
+ values.
+ We see that, for 
+\begin_inset Formula $N=100$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\rmn{gap}}=0.06$
+\end_inset
+
+, 
+\begin_inset Formula $P(>0.06)\approx20$
+\end_inset
+
+ per cent.
+ This means that the probability of finding a gap with a size larger than
+ six times the mean separation is not significantly small.
+ When the mean number of lines is large, 
+\begin_inset Formula $\lambda\sim N>>1$
+\end_inset
+
+, our 
+\begin_inset Formula $P(>x_{\rmn{gap}})$
+\end_inset
+
+ approaches the result obtained by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+citet[fig.
+ 4]{b22}
+\end_layout
+
+\end_inset
+
+ for small (but still very large if measured in units of the mean separation)
+ 
+\begin_inset Formula $x_{\rmn{gap}}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $P(>x_{\rmn{gap}})\sim N(1-x_{\rmn{gap}})^{N-1}\sim N{\rmn{exp}}(-\lambda x_{\rmn{gap}})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bsp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "lastpage"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
