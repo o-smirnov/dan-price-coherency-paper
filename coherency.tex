@@ -948,14 +948,16 @@ B^{\alpha\beta\gamma\delta} =  -B^{\beta\alpha\gamma\delta} = -B^{\alpha\beta\de
 
 To see the direct analogy to the brightness matrix, consider again the case of the monochromatic plane wave propagating 
 along $\bmath{z}$ (Eq.~\ref{eq:MPWZ}). The EMF tensor then takes a particularly simple form:
-\[
+\begin{equation}
+\label{eq:F-planewave}
 F^{\alpha\beta} = \frac{1}{c} \left(\begin{array}{cccc}
 0       & -e_{x} & -e_{y} & 0 \\
 e_{x} & 0        & 0        & e_x \\
 e_{y} & 0        & 0        & e_y \\
 0       & -e_{x} & -e_y   & 0
 \end{array}\right),
-\]
+\end{equation}
+
 and the brightness tensor has only $8^2=64$ non-zero components, with the additional `0-3' symmetry property:
 \begin{eqnarray}
 B^{0\beta\gamma\delta} = B^{3\beta\gamma\delta} && B^{\alpha0\gamma\delta} = B^{\alpha3\gamma\delta} \nonumber\\
@@ -1000,9 +1002,12 @@ plane wave. Rows correspond to $\alpha\beta$, columns to $\gamma\delta$.}
 
 So far this has been nothing more than a recasting of the RIME using EMF tensors. Consider, however, the case where antennas $p$ and $q$ measure the signal in different inertial reference frames. The EMF tensor observed by
 antenna $p$ becomes
+
+
 \[
 [F_p]^{\alpha\beta} = [\Lambda_p]^\alpha_{\alpha'} [\Lambda_p]^\beta_{\beta'} [F_0]^{\alpha'\beta'},
 \]
+
 where $[\Lambda_p]^\alpha_\mu$ is the Lorentz tensor corresponding to the transform between the signal frame and the
 antenna frame. Since the same Lorentz tensor always apears twice in these equations (due to $F$ being a (2,0)-type tensor), let us designate
 \begin{equation}
@@ -1078,7 +1083,7 @@ long been known that Jones and Mueller transformation matrices are
 related to Lorentz transformations by the Lorentz group. As discussed in  \citet{Barakat:1963},
 Wiener was aware as early as 1928 that the the 2$\times$2 coherency matrix could be written in terms of the 
 Pauli spin matrices. More recently, \citet{Baylis:1993} presents a more general geometric algebra formalism 
-that unifies Jones and Mueller matrices with Stokes parameters and the Poincaré sphere. 
+that unifies Jones and Mueller matrices with Stokes parameters and the Poincar?sphere. 
 \citet{Han:1997jones} show that the Jones formalism is a representation of the six-parameter 
 Lorentz group; further to this \citet{Han:1997stokes} show that the Stokes parameters form a Minkowskian 
 four-vector, similar to the energy-momentum four-vector in special relativity. 
@@ -1382,11 +1387,91 @@ within the analogue systems; this cannot be done with Jones calculus.\label{fig:
 
 %
 
-\subsection{RRIME and Lorentz-boosted polarization}
-To illustrate how the RRIME can be used to describe relativistic effects, let us construct a toy example.
-Suppose we have an unpolarized point source (Table~\ref{tab:BT}),
-with antennas  $p$ and $q$ are located in the $xy$ plane perpendicular
-to the direction of propagation (so the $K$ component becomes unity), antenna $p$ at rest with respect to the 
+\subsection{RRIME and Lorentz boosts}
+
+To illustrate how the RRIME can be used to describe relativistic effects, let us first consider the ``simple'' case of a
+relativistically moving source. Suppose we have an unpolarized point source (Table~\ref{tab:BT}), with antennas $p$ and 
+$q$ located in the $xy$ plane perpendicular to the direction of propagation $z$ (so the $K$ component becomes unity), both
+moving parallel to the $x$ axis with velocity $v$. The Lorentz transformation tensor from the signal frame to the antenna
+frame is then
+
+\begin{equation}
+[\Lambda_p]^\alpha_{\alpha'}=
+\left(\begin{array}{cccc}
+\gamma & -\beta\gamma & 0 & 0 \\
+-\beta\gamma & \gamma & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 
+\end{array}\right),
+\label{eq:Lboost}
+\end{equation}
+
+where
+\[
+\beta = \frac{v}{c},~~\gamma=\frac{1}{\sqrt{1-\beta^2}}.
+\]
+The Lorentz factor $\gamma$ is unity 1 at $v=0$, and goes to infinity with $v\rightarrow c$. This case can be analyzed without
+invoking coherencies. Consider the EMF, which in the signal frame is a plane wave (Eq.~\ref{eq:F-planewave}). In the antenna frame it becomes
+
+\[
+[F_p]^{\alpha\beta} = \frac{1}{c} 
+\left(\begin{array}{cccc}
+0 				& -e_x 					& -\gamma e_y 	  	& -\beta \gamma e_x \\
+e_x 			& 0 					& \beta\gamma e_y 	& \gamma e_x \\
+\gamma e_y 		& -\beta\gamma e_y 		& 0 				& e_y \\
+\beta\gamma e_x & -\gamma e_x 			& -e_y 				& 0
+\end{array}\right ) .
+\] 
+
+Noting that 
+
+\[
+\left(\begin{array}{ccc}
+\gamma^{-1} & 0 & \beta \\
+0 & 1 & 0 \\
+-\beta & 0 & \gamma^{-1}
+\end{array}\right )
+\left(\begin{array}{c}
+e_{x} \\
+\gamma e_y \\
+\beta \gamma e_x 
+\end{array}\right ) = 
+\gamma \left(\begin{array}{c}
+e_x \\
+e_y \\
+0
+\end{array}\right ),
+\]
+
+and
+
+\[
+\left(\begin{array}{ccc}
+\gamma^{-1} & 0 & \beta \\
+0 & 1 & 0 \\
+-\beta & 0 & \gamma^{-1}
+\end{array}\right )
+\left(\begin{array}{c}
+-e_y \\
+\gamma e_x \\
+-\beta \gamma e_y 
+\end{array}\right ) = 
+\gamma \left(\begin{array}{c}
+-e_y \\
+e_x\\
+0
+\end{array}\right ),
+\]
+
+
+and $\gamma^{-2}+\beta^2=1,$ we can see that the EMF in the antenna frame is equivalent to a boost of the original EMF by $\gamma$, coupled to a rotation through $-\cos^{-1}\beta$ in the $xz$ plane. 
+
+
+The measured coherency then becomes
+
+
+
+antenna $p$ at rest with respect to the 
 signal frame (so the $[\Lambda_p]^{\alpha\beta}_{\alpha'\beta'}$ component becomes the equivalent of unity -- the 
 product of two Kronecker deltas -- and thus may be dropped), and antenna $q$ moving parallel to the $x$ axis 
 with velocity $v$. This is the classical example of `Lorentz boost', with the Lorentz transformation tensor 
@@ -1409,7 +1494,7 @@ The measured coherency then becomes
 \[
 [V_{pq}]^{\alpha\mu\nu\delta} = 
 B^{\alpha\mu\nu'\delta'}
-[\Lambda_q]^\nu_{\nu'} [\Lambda_q]^\delta_\delta',
+[\Lambda_q]^\nu_{\nu'} [\Lambda_q]^\delta_{\delta'},
 \]
 or writing it out as an explicit sum for two particular elements of interest (and dropping the $pq$ indices):
 \begin{eqnarray*}
