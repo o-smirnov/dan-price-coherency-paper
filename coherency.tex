@@ -875,14 +875,17 @@ case (consider, e.g., space VLBI), then we must in principle account for the fac
 altered when moving from one reference frame to another, and in particular, that the $\bmath{e}$ and $\bmath{h}$ 
 components intermix. In special relativity, this can be elegantly formulated in terms of the \emph{electromagnetic 
 field tensor}, which represents the 6 independent components of the EMF by a (2-0)-type tensor:
-\[
+
+\begin{equation}
 F^{\alpha\beta}=\left(\begin{array}{cccc}
 0 & -e_{x}/c & -e_{y}/c & -e_{z}/c\\
 e_{x}/c & 0 & -h_{z} & h_{y}\\
 e_{y}/c & h_{z} & 0 & -h_{x}\\
 e_{z}/c & -h_{y} & h_{x} & 0
 \end{array}\right),
-\]
+\label{eq:F-general}
+\end{equation}
+
 The advantage of this formulation is that the EMF tensor follows standard coordinate transform laws of special 
 relativity. That is, for a different inertial reference frame given by the Lorentz transformation tensor 
 $\Lambda^\alpha_{\alpha'}$, the EMF tensor transforms as:
@@ -1464,51 +1467,37 @@ e_x\\
 \]
 
 
-and $\gamma^{-2}+\beta^2=1,$ we can see that the EMF in the antenna frame is equivalent to a boost of the original EMF by $\gamma$, coupled to a rotation through $-\cos^{-1}\beta$ in the $xz$ plane. 
+and $\gamma^{-2}+\beta^2=1,$ we can see that the EMF in the antenna frame is equivalent to a boost of the original EMF 
+by $\gamma$ (also called {\em Doppler boost}), coupled to a rotation through $\phi=-\cos^{-1}\beta$ in the $xz$ plane (i.e. the
+direction of propagation appears to change, also called {\em relativistic aberration}). Both effects
+are well-understood in the guise of {\em relativistic beaming}, and explain why, for example, some AGNs exhibit asymmetric 
+jets \citep[see e.g.][]{Sparks1992}.
 
-
-The measured coherency then becomes
-
-
-
-antenna $p$ at rest with respect to the 
+From an RRIME point of view, a more interesting case arises when one antenna is moving with respect to the other (as is the
+case in space VLBI). Let's consider antenna $p$ to be at rest with respect to the 
 signal frame (so the $[\Lambda_p]^{\alpha\beta}_{\alpha'\beta'}$ component becomes the equivalent of unity -- the 
-product of two Kronecker deltas -- and thus may be dropped), and antenna $q$ moving parallel to the $x$ axis 
-with velocity $v$. This is the classical example of `Lorentz boost', with the Lorentz transformation tensor 
-$[\Lambda_q]^\alpha_{\alpha'}$ being
-\begin{equation}
-[\Lambda_q]^\alpha_{\alpha'}=\left(\begin{array}{cccc}
-\gamma & -\beta\gamma & 0 & 0 \\
--\beta\gamma & \gamma & 0 & 0 \\
-0 & 0 & 1 & 0 \\
-0 & 0 & 0 & 1 
-\end{array}\right),
-\label{eq:Lboost}
-\end{equation}
-where
+product of two Kronecker deltas -- and thus may be dropped), and antenna to be $q$ moving parallel to the $x$ axis 
+with velocity $v$. The $[J_q]^{\gamma\delta}_{\gamma'\delta'}$ tensor in Eq. ~\ref{eq:RRIME-J} is then a product 
+of two Lorentz tensors of the form of Eq.~\ref{eq:Lboost}. In the absense of other effects, the measured 
+coherency becomes 
+
 \[
-\beta = \frac{v}{c},~~\gamma=\frac{1}{\sqrt{1-\beta^2}}.
-\]
-The quantity $\gamma$ is called the Lorentz factor, which is unity 1 at $v=0$, and goes to infinity with $v\rightarrow c$.
-The measured coherency then becomes
-\[
-[V_{pq}]^{\alpha\mu\nu\delta} = 
-B^{\alpha\mu\nu'\delta'}
-[\Lambda_q]^\nu_{\nu'} [\Lambda_q]^\delta_{\delta'},
+[V_{pq}]^{\alpha\beta\gamma\delta} = 
+B^{\alpha\beta\gamma'\delta'}
+[\Lambda_q]^\gamma_{\gamma'} [\Lambda_q]^\delta_{\delta'},
 \]
 or writing it out as an explicit sum for two particular elements of interest (and dropping the $pq$ indices):
 \begin{eqnarray*}
-V^{0110} & = & \sum_{\nu\delta}
-B^{01\nu\delta}
-[\Lambda_q]^{0}_{\nu} 
+V^{0110} & = & \sum_{\gamma\delta}
+B^{01\gamma\delta}
+[\Lambda_q]^{0}_{\gamma} 
 [\Lambda_q]^{1}_{\delta} \\
-V^{0220} & = & \sum_{\nu\delta}
-B^{02\nu\delta}
-[\Lambda_q]^{0}_{\nu} 
+V^{0220} & = & \sum_{\gamma\delta}
+B^{02\gamma\delta}
+[\Lambda_q]^{0}_{\gamma} 
 [\Lambda_q]^{2}_{\delta}.
 \end{eqnarray*}
-Each sum above nominally contains 16 terms, but we may note from Table~\ref{tab:BT} (looking up rows `01' and `02')
-that only four components of $B$ in each sum are non-zero. Combining this with Eq.~\ref{eq:Lboost}, we get:
+Each sum above nominally contains 16 terms, but if we assume an unpolarized point source, then from Table~\ref{tab:BT} (looking up rows `01' and `02') we note that only four components of $B$ in each sum are non-zero. Combining this with Eq.~\ref{eq:Lboost}, we get:
 \[
 V^{0110} = I(\gamma^2 - \beta^2\gamma^2) = I, 
 \]
@@ -1524,64 +1513,30 @@ Q_\mathrm{meas} &=& \frac{V^{0110}-V^{0220}}{2} = I\frac{1-\gamma}{2} \\
 U_\mathrm{meas} &=& 0 \\
 V_\mathrm{meas} &=& 0.
 \end{eqnarray*}
-If antenna $q$ is stationary, then $\gamma=1$, and we measure the same $I$ and $Q=0$ as in
-the signal frame. However, if antenna $q$ is moving, then $\gamma>1$, and we measure boost in
-the total power $I$, and negative $Q$ (that is, linear polarization perpendicular to the
-direction of motion). 
 
-A similar scenario arises when both antennas are stationary and the signal frame is moving. 
-In this case the measured coherency becomes
-\[
-[V_{pq}]^{\alpha\mu\nu\delta} = 
-\Lambda^{\alpha\mu}_{\alpha'\mu'}
-B^{\alpha'\mu'\nu'\delta'}
-\Lambda^{\nu\delta}_{\nu'\delta'}.
-\]
-Doing the same calculations, we then arrive at
-\begin{eqnarray}
-\label{eq:lorpol}
-I_\mathrm{meas} &=& I\frac{1+\gamma^2}{2} \\ 
-Q_\mathrm{meas} &=& I\frac{1-\gamma^2}{2} \nonumber\\
-U_\mathrm{meas} &=& 0 \nonumber\\
-V_\mathrm{meas} &=& 0.
-\end{eqnarray}
+Since $\gamma>1$, we measure boost in the total power $I$, and negative apparent $Q$ (that is, linear polarization 
+perpendicular to the direction of motion). The physical meaning of this instrumental $Q$ can be understood in
+terms of the polarization aberration discussed by \citet{Carozzi:2009hf}: because the arriving plane wave is aberrated
+in the frame of antenna $q$ (i.e. no longer appears to propagate along the $z$ axis, but along a slightly different 
+direction), it is measured as polarized by dipoles that are parallel to $xy$.
 
-Generalizing this to motion along an arbitrary $xy$ direction is just a matter of rotating the coordinate frame, which
-converts polarized flux between $Q$ and $U$. The general result is the following: relative velocity across the line of sight 
-\emph{manufactures} linear polarization oriented orthogonal to the direction of motion, at a level of $\frac{\gamma^2-1}{2}$ relative
-to the at-rest total flux, and \emph{boosts} the total observed flux by the same increment.
+In principle, the effects of Doppler boost and relativisit aberration can be described without invoking the full RRIME -- 
+traditional Jones calculus still suffices. 
+However the RRIME provides a unifying framework that allows these effects to be incorporated into a single compact interferometric 
+measurement equation. This is similar to how the original RIME formulation of \citet{Hamaker:1996p5735} incorporated
+polarimetric effects that were already described previously \citep{Sault-AT-Calibration} in a compact closed form.
 
-There is a simple intutitive explanation for this effect -- one only needs to imagine making a measurement of an unpolarized 
-plane wave with a pair of $XY$ dipoles. Dipoles at rest will, by definition, measure the same value for the $XX$ and $YY$ 
-coherencies. If the dipoles are in motion, then a dipole oriented along the direction of motion becomes
-relativistically contracted, while the orthogonal dipole does not change. This must necessarily result in different
-measurements for $XX$ and $YY$, which is exactly what linear polarization is.
+An even more interesting use case arises when the incident EMF can no longer be described by a plane wave. 
+The EMF tensor of Eq.~\ref{eq:F-general} then no longer reduces to Eq.~\ref{eq:F-planewave}, 
+or in other words, the $\bmath{e}$ and $\bmath{h}$ components of the EM are no longer mutually redundant. Under Lorentz 
+transformations, the $\bmath{e}$ and $\bmath{h}$ components then become intermixed -- an antenna measuring 
+$\bmath{e}$ in the rest frame will also measure some contribution from $\bmath{h}$ in a moving frame. It is clear that 
+in this case, Jones calculus (which only operates on $\bmath{e}$) can no longer apply, and a full RRIME must be invoked. 
+Practical applications of this will have to wait for near-field space VLBI.
 
-We should now consider whether the effect is observable. The Earth's orbital motion ($\sim 30$ km/s) should produce 
-a relative effect on the order of $5\cdot10^{-9}$, which is well beyond the sensitivity of current interferometers,
-though a careful differential measurement would conceivably be within reach of an SKA-class instrument. If space 
-VLBI ever reaches such sensitivities, corrections for Lorentz boosts must become routine. We can think of two 
-present-day observables, however.
-
-\subsubsection{Effect on relativistic jets}
-
-For a source moving at $0.1c$ and $0.5c$ in the $xy$ plane, Eq.~\ref{eq:lorpol} predicts linear polarization
-on the level of 0.5\% and 16\%, respectively, orthogonal to the direction of motion. We stress that this polarization 
-arises independently of any physical emission mechanism, and is entirely due to the relative motion of the source and the 
-observer. Interestingly, a distinct population of AGNs exhibits linear polarization across the jet axis
-\citep{Lyutikov2005}. Surprisingly, we do not find explicit mention of such `manufactured' polarization effect in the 
-literature, although Lorentz transformations are routinely taken into account in current work on jet models (\emph{ibid.}). 
-This may be due to such work explicitly concentrating on emission mechanisms and the effect of Lorentz transforms on
-emission that is `already' astrophysically polarized (i.e. polarized in the rest frame of the source), so while
-`manufactured' polarization may be explicitly taken into account in the mathematics, it is not treated in isolation. 
-
-\subsubsection{CMB polarization dipole}
-
-Assuming a value of $\beta=1.23\cdot10^{-3}$ for our peculiar velocity relative to the CMB rest frame, Eq.~\ref{eq:lorpol} 
-predicts an additional polarization component in the CMB, reaching up to $7.5\cdot10^{-7}$ relative in directions orthogonal 
-to the peculiar velocity vector. {\em And nobody seems 
-to talk about the ensuing polarization dipole, so is it that they just subtract it with the foregrounds?}
-
+Conceptually, the latter example is very similar to the transmission matrix formalism. In a system where the voltage and 
+current components intermix, the voltage-only Jones formalism no longer applies, and a formalism incorporating both 
+components must be invoked.
 
 \subsection{Conclusions}
 
