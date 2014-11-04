@@ -156,7 +156,7 @@ relationship.
 
 In their seminal Measurement Equation (ME) paper, \citet{Hamaker:1996p5735}
 showed that Mueller and Jones calculuses provide a good framework for
-modeling radio interferometers. In optics, Jones and Mueller matrices
+modelling radio interferometers. In optics, Jones and Mueller matrices
 are used to model the transmission of light through optical elements
 \citep{Jones1941,Mueller1948}. Mueller matrices are $\mbox{4}\times\mbox{4}$
 matrices which act upon the Stokes vector 
@@ -198,7 +198,7 @@ $q$ branches (the dashed areas).
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.95\columnwidth]{figures/rime-diagram}
+\includegraphics[width=0.95\columnwidth]{figures-rime-diagram}
 \par\end{centering}
 
 \caption{Block diagram showing a simple model of an interferometer that can
@@ -207,8 +207,6 @@ free space to two telescopes, \emph{p }and \emph{q}. After passing
 through the telescope's analogue chain, the two signals are interfered
 in a cross-correlator.\label{fig:RIME-cartoon}}
 \end{figure}
-
-
 
 
 \subsubsection{Hamaker's RIME derivation}
@@ -239,7 +237,6 @@ is a $\mbox{4}\times\mbox{4}$ matrix. Here, $\mbox{\textbf{\emph{e}}}_{00}$
 is the sky brightness of a single point source of radiation. For
 a multi element interferometer, every antenna has its own unique Jones
 matrix, and a RIME may be written for every pair of antennas.
-
 
 Due to their choice of outer product, Hamaker et. al. arrive at a
 coherency vector
@@ -281,7 +278,7 @@ a radiation source through to the voltage at the terminal of an antenna.
 which then relates the measured voltage coherency of that pair to
 a source's brightness.
 \end{itemize}
-Showing that these calculuses were applicable and indeed useful for modeling
+Showing that these calculuses were applicable and indeed useful for modelling
 and calibrating radio interferometers was an important step forward
 in radio polarimetry.
 
@@ -441,7 +438,7 @@ which weds the advantages of both approaches.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.8\columnwidth]{figures/transmission-matrix}
+\includegraphics[width=0.8\columnwidth]{figures-transmission-matrix}
 \par\end{centering}
 
 \caption{Top: The ABCD matrix for a 2-port network. In this diagram, voltage
@@ -464,7 +461,7 @@ matrices.
 
 To begin, we introduce the coherence matrices of \citet{Wolf1954},
 that fully describe the coherence statistics of an electromagnetic
-field. We may start by introducting $\mbox{\textbf{\emph{e}}}(\mbox{\textbf{\emph{r}}},t)$
+field. We may start by introducing $\mbox{\textbf{\emph{e}}}(\mbox{\textbf{\emph{r}}},t)$
 and $\mbox{\textbf{\emph{h}}}(\mbox{\textbf{\emph{r}}},t)$ as the
 complex analytic representations of the electric and magnetic field
 vectors at a spacetime point $(\mbox{\textbf{\emph{r}}},t)$: 
@@ -699,7 +696,7 @@ where $\mathbf{F}$ is the matrix
 \end{pmatrix}.
 \end{equation}
 Under these conditions, the rank of $\mathbb{B}$ is 2, so the relationship
-in Eq.~\ref{eq:two-pt-coherency} is overconstrained. It follows
+in Eq.~\ref{eq:two-pt-coherency} is over constrained. It follows
 that the $\mbox{2}\times\mbox{2}$ RIME is perfectly acceptable ---
 and indeed preferable to Eq.~\ref{eq:two-pt-coherency} --- for describing
 coherency of plane waves that propagate through free space.
@@ -841,7 +838,7 @@ Since we have now shown the $2\times2$ form of the RIME to be insufficient, the 
 we been getting away with using it? Historically, practical applications of the RIME have tended to follow 
 the formulation of \citet{JEN:note185}, rolling the electronic response of the overall system (as well as 
 tropospheric phase, etc.) into a single `$G$-Jones' term that is solved for during calibration. Under these
-circumstanes, the $2\times2$ formalism is pefectly adequate -- it is only when we attempt to model the individual 
+circumstances, the $2\times2$ formalism is perfectly adequate -- it is only when we attempt to model the individual 
 components of the analogue receiver chain that its limitations are exposed. On the other hand, \citet{Carozzi:2009hf} 
 have highlighted the limitations of Jones calculus in the wide-field polarization regime.
 
@@ -921,9 +918,7 @@ becomes
 where $K_p$ is the complex exponent of Eq.~\ref{eq:F0-x}, and is the direct equivalent of the $K$-Jones 
 term of the RIME \citep{Smirnov:2011a}. The quantity in the square brackets is the equivalent of the
 brightness matrix $\mathsf{B}$, which we'll call the \emph{brightness tensor}:
-%\footnote{
-%This tensor (sans  $2c^2$ factor and time averaging) has previously been referred to as the \emph{covariant spectral density tensor} \citep{Sundkvist:2006cl}.
-%}
+
 \begin{equation}
 B^{\alpha\beta\gamma\delta} = [B_0]^{\alpha\beta\gamma\delta} = 2c^2 \langle [F_0(\bmath{\bar{x}}_0)]^{\alpha\beta}[F_0^H(\bmath{\bar{x}}_0)]^{\gamma\delta} \rangle.
 \end{equation}
@@ -1012,7 +1007,7 @@ antenna $p$ becomes
 \]
 
 where $[\Lambda_p]^\alpha_\mu$ is the Lorentz tensor corresponding to the transform between the signal frame and the
-antenna frame. Since the same Lorentz tensor always apears twice in these equations (due to $F$ being a (2,0)-type tensor), let us designate
+antenna frame. Since the same Lorentz tensor always appears twice in these equations (due to $F$ being a (2,0)-type tensor), let us designate
 \begin{equation}
 [\Lambda_p]^{\alpha\beta}_{\alpha'\beta'} = [\Lambda_p]^\alpha_{\alpha'} [\Lambda_p]^\beta_{\beta'}
 \label{eq:LL}
@@ -1069,14 +1064,6 @@ the relation of the RRIME to work from other fields are treated in the discussio
 
 \section{Discussion}
 
-%We are fortunate to be able to use results from both microwave network
-%theory and optics to explain a signal's journey from an astrophysical
-%source right through to the end of a telescope's analogue chain. Microwave
-%network theory is better suited to describe the analogue components
-%of a radio telescope, and Jones matrices are more suitable for describing
-%free space propagation of plane waves.
-
-
 The formulations presented here highlight the relationship between the seemingly disparate 
 fields of microwave networking and special relativity to measurements in radio astronomy. This is a 
 remarkable illustration of how these fields are intrinsically related by underlying fundamental physics. 
@@ -1086,27 +1073,14 @@ long been known that Jones and Mueller transformation matrices are
 related to Lorentz transformations by the Lorentz group. As discussed in  \citet{Barakat:1963},
 Wiener was aware as early as 1928 that the the 2$\times$2 coherency matrix could be written in terms of the 
 Pauli spin matrices. More recently, \citet{Baylis:1993} presents a more general geometric algebra formalism 
-that unifies Jones and Mueller matrices with Stokes parameters and the Poincar?sphere. 
+that unifies Jones and Mueller matrices with Stokes parameters and the Poincaré sphere. 
 \citet{Han:1997jones} show that the Jones formalism is a representation of the six-parameter 
 Lorentz group; further to this \citet{Han:1997stokes} show that the Stokes parameters form a Minkowskian 
 four-vector, similar to the energy-momentum four-vector in special relativity. 
 
-%% THESE REFS CUT, GETTING TOO BROAD? 
-%Exploring the mathematical basis for Stokes parameters remains a topic of interest (see for example
-%\citealt{Sundkvist:2006cl, Santos:2012, Karlsson:2013tj}).
-%\citet{Britton:2000wr} -- Pulsars, Lorentz group
-%\citet{Whitney:1971}
-
 In contrast, the RRIME presented here is novel as it fully describes interferometric measurement between
 two points, instead of simply describing polarization states and defining a transformation algebra. Similarly, the 2N-port
 RIME specifically shows how microwave networking methods can be incorporated into a ME.
-
-% By extension, the transformation matrices within the 2N-port RIME with N=2 may also be considered 
-% Lorentz transformations; we are unaware of any other work where this is explicitly stated.
-
-% In the sections above we have presented two alternative formulations of the RIME. Both of these formulations
-% consider magnetic and mixed field coherency; this is absent from the   $\mbox{2}\times\mbox{2}$ version
-%of the RIME.  
 
 What do we gain from using these more general measurement equations in lieu of the simpler 2$\times$2 RIME?
 For most applications, it will suffice to simply be aware of the standard RIME's limitations, 
@@ -1237,7 +1211,7 @@ upon frequency.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.99\columnwidth]{figures/total-power-block-diagram}
+\includegraphics[width=0.99\columnwidth]{figures-total-power-block-diagram}
 \par\end{centering}
 
 \protect\caption{Block diagram of a three-state switching experiment. In addition to the antenna path, 
@@ -1290,7 +1264,7 @@ T_{sky}=T_{A}(1-|\Gamma|^2),\label{eq:sky-ant}
 where the reflection coefficient $\Gamma\equiv S_{11}$. Failure to account for reflections (i.e. impedance mismatch)
 results in an unsatisfactory calibration, due to standing waves within the coaxial cable that manifest as 
 a sinusoidal ripple on $T_A = T_{A}(\nu)$. This effect is a prime example why one must not use Jones matrices
-to describe analogue components separately; an example showing a standing wave present on three-state switc
+to describe analogue components separately; an example showing a standing wave present on three-state switch
 calibrated LEDA spectrum is shown in Figure~\ref{fig:leda-all}.
 
 We may instead write the equations above in terms of 2N-port transmission matrices, and form MEs for the 
@@ -1317,21 +1291,10 @@ important if cross-polarization terms are non-negligible. Also, we may expand Eq
 effects. This ability to put all instrumental effects into a single ME may open avenues toward probabilistic data analysis techniques
 such as Markov-chain Monte Carlo (MCMC). 
 
-%\begin{eqnarray*}
-%\mathbf{R} & = & (\mathbf{G}(\mathbf{A}B_{S}\mathbf{A}^{H}-B_{L})\mathbf{G}^{H})(\mathbf{G}(\mathbf{D}B_{D}\mathbf{D}^{H})\mathbf{G}^{H})^{-1}\\
-% & = & \mathbf{G}(\mathbf{A}B_{S}\mathbf{A}^{H}-B_{L})(\mathbf{D}B_{D}\mathbf{D}^{H})^{-1}\mathbf{G}^{-1}.
-%\end{eqnarray*}.
-%note $\mathbf{G}\neq g\mathbf{I}$ in general, even for a 2-port
-%network. $\mathbf{D}=\mathbf{I}$ is a pretty good approximation usually
-%(noise diode and load are very close together). A well-matched antenna
-%has a reflection coefficient ($S_{11}$ < -15 dB) over its operational
-%band, so matrix $\mathbf{A}$ contains non-negligible off-diagonal
-%terms.
-
 \begin{figure*}
-\subfloat[The three switching states of a LEDA antenna\label{fig:leda-shc}.]{\includegraphics[width=0.99\columnwidth]{figures/leda-shc}
+\subfloat[The three switching states of a LEDA antenna\label{fig:leda-shc}.]{\includegraphics[width=0.99\columnwidth]{figures-leda-shc}
 
-}\subfloat[Standing wave residuals from switched calibration. ]{\includegraphics[width=0.99\columnwidth]{figures/leda-residuals}}
+}\subfloat[Standing wave residuals from switched calibration. ]{\includegraphics[width=0.99\columnwidth]{figures-leda-residuals}}
 
 \protect\caption{ (a) Data from a LEDA three-state switched antenna during a testing campaign in December, 2013. These correspond to 
 the $P_A$, $P_L$, and $P_D$ of Eqns.~\ref{eq:pow-ant}-\ref{eq:pow-diode}.
@@ -1340,55 +1303,6 @@ The fast varying sinusoid can be attributed standing waves along the $\sim$300 m
 within the analogue systems; this cannot be done with Jones calculus.\label{fig:leda-all}}
 
 \end{figure*}
-
-%Measuring values of \textasciitilde{}1mK on a 300-3000 K load / sky
-%will be pretty hard and will require pretty darn good calibration
-
-%%% OLD 2-PAD EXAMPLE! %%%
-%This can be seen in a real world example: the 2-polarization, all
-%digital aperture array (2-PAD). 2-PAD was a pathfinder project to
-%demonstrate the feasibility of an all digital antenna array for radio
-%astronomy. An overview of the project is given in \citet{Ikin:2009p8855};
-%it is used as an example here as component measurement data were readily
-%available \citep{Price:2009p8869}.
-
-%The overall gain magnitude for a single analogue chain within the
-%2-PAD telescope is shown in Figure~\ref{fig:Cascaded-vs-single}.
-%The figure shows the gain magnitude as computed by two methods: a
-%cascaded Jones matrix method (single polarization only), where each
-%component was measured separately; and the entire analogue chain measured
-%as a single device under test (DUT). These data were measured on a
-%Vector Network Analyser (VNA). A ripple can be seen in the gain magnitude
-%of the single measurement which is not apparent in the cascaded measurement.
-%This does not point to design flaws in the 2-PAD telescope; rather
-%it indicates that one must apply suitable algebra -- in this case,
-%transmission matrix methods -- to accurately model components.
-
-%\begin{figure}
-%\begin{centering}
-%\includegraphics[width=0.8\columnwidth]{figures/2pad_data}
-%\par\end{centering}
-
-%\caption{Comparison of cascaded vs single measurement of 2-PAD components.
-%The red line shows the gain magnitude as a function of frequency for
-%the 2-PAD analogue chain measured as a single DUT. The black line
-%shows the result of using only the forward gain ($S_{21}$) of each
-%component measured as discrete DUTs. \label{fig:Cascaded-vs-single}}
-%\end{figure}
-
-
-
-%\subsection{End-to-end simulations}
-%
-%Software packages such as OSKAR2 \citep{SoftwareOSKAR2} use the $\mbox{2}\times\mbox{2}$
-%RIME to simulate the response of aperture arrays and interferometeric
-%arrays. By bootstrapping such software to use the 2N-port port RIME
-%as its measurement framework, we can better simulate how single components
-%affect the performance of the telescope. We can then conduct full
-%end-to-end simulations to investigate how different amplifer and filter
-%implementations affect visibilities.
-
-%
 
 \subsection{RRIME and Lorentz boosts}
 
@@ -1408,7 +1322,6 @@ frame is then
 \end{array}\right),
 \label{eq:Lboost}
 \end{equation}
-
 where
 \[
 \beta = \frac{v}{c},~~\gamma=\frac{1}{\sqrt{1-\beta^2}}.
@@ -1425,9 +1338,7 @@ e_x 			& 0 					& \beta\gamma e_y 	& \gamma e_x \\
 \beta\gamma e_x & -\gamma e_x 			& -e_y 				& 0
 \end{array}\right ) .
 \] 
-
 Noting that 
-
 \[
 \left(\begin{array}{ccc}
 \gamma^{-1} & 0 & \beta \\
@@ -1445,9 +1356,7 @@ e_y \\
 0
 \end{array}\right ),
 \]
-
 and
-
 \[
 \left(\begin{array}{ccc}
 \gamma^{-1} & 0 & \beta \\
@@ -1465,8 +1374,6 @@ e_x\\
 0
 \end{array}\right ),
 \]
-
-
 and $\gamma^{-2}+\beta^2=1,$ we can see that the EMF in the antenna frame is equivalent to a boost of the original EMF 
 by $\gamma$ (also called {\em Doppler boost}), coupled to a rotation through $\phi=-\cos^{-1}\beta$ in the $xz$ plane (i.e. the
 direction of propagation appears to change, also called {\em relativistic aberration}). Both effects
@@ -1478,7 +1385,7 @@ case in space VLBI). Let's consider antenna $p$ to be at rest with respect to th
 signal frame (so the $[\Lambda_p]^{\alpha\beta}_{\alpha'\beta'}$ component becomes the equivalent of unity -- the 
 product of two Kronecker deltas -- and thus may be dropped), and antenna to be $q$ moving parallel to the $x$ axis 
 with velocity $v$. The $[J_q]^{\gamma\delta}_{\gamma'\delta'}$ tensor in Eq. ~\ref{eq:RRIME-J} is then a product 
-of two Lorentz tensors of the form of Eq.~\ref{eq:Lboost}. In the absense of other effects, the measured 
+of two Lorentz tensors of the form of Eq.~\ref{eq:Lboost}. In the absence of other effects, the measured 
 coherency becomes 
 
 \[
@@ -1524,7 +1431,7 @@ Note that this formulation does not incorporate the Doppler shift observed by a 
 correlator takes care of correcting for this when channelizing), or the problems of clock distribution to a relativistically
 moving observing platform. This will have to be addressed in a future work.
 
-In principle, the effects of Doppler boost and relativisit aberration can be described without invoking the full RRIME -- 
+In principle, the effects of Doppler boost and relativistic aberration can be described without invoking the full RRIME -- 
 traditional Jones calculus still suffices. 
 However the RRIME provides a unifying framework that allows these effects to be incorporated into a single compact interferometric 
 measurement equation. This is similar to how the original RIME formulation of \citet{Hamaker:1996p5735} incorporated
