@@ -89,7 +89,7 @@ $^3$SKA South Africa, 3rd Floor, The Park, Park Road, Pinelands, 7405, South Afr
 The Radio Interferometer Measurement Equation (RIME) is a matrix based mathematical
 model that describes the response of a radio interferometer.  The Jones
 calculus it employs is not suitable for describing the analogue components
-of a telescope. This is as it does not consider the effect of impedance
+of a telescope. This is because it does not consider the effect of impedance
 mismatches between components.  This paper aims to highlight the limitations
 of Jones calculus, and suggests some alternative methods that are
 more applicable.
@@ -105,9 +105,7 @@ These reformulations extend the standard formulation and highlight its limitatio
 \end{abstract}
 
 \begin{keywords} 
-	Methods: numerical 
-	--- Methods: analytical 
-	---  Methods: data analysis 
+	Methods: data analysis 
 	--- Techniques: interferometric 
 	--- Techniques: polarimetric 
 \end{keywords}
@@ -171,7 +169,7 @@ system such that z-axis is aligned with the Poynting vector
 \mbox{\textbf{\emph{e}}}(\mbox{\emph{\textbf{r}}},t)=\begin{pmatrix}e_{x}(\mbox{\emph{\textbf{r}}},t) & e_{y}(\mbox{\emph{\textbf{r}}},t)\end{pmatrix}^{T}.
 \end{equation}
 Jones calculus dictates that along a signal's path, any (linear) transformation
-can be represented with a Jones matrix, J:
+can be represented with a Jones matrix, \textbf{\emph{J}}:
 \begin{equation}
 \mbox{\textbf{\emph{e}}}_{out}(\mbox{\textbf{\emph{r}}},t)=\mbox{\textbf{\emph{J}}}\mbox{\textbf{\emph{e}}}_{in}(\mbox{\textbf{\emph{r}}},t)\label{eq:jones-transmission}
 \end{equation}
@@ -287,8 +285,8 @@ in radio polarimetry.
 \subsubsection{The 2$\times$2 RIME}
 
 In a later paper, \citet{Hamaker:2000p7625} presents a modified formulation
-of the RIME, where instead of forming the coherency vector from the
-outer product ($\star$), the coherency matrix is formed from the
+of the RIME, where instead of forming the coherency vector from the Kronecker
+outer product ($\star$), the coherency matrix is formed from the matrix
 outer product ($\otimes$):
 \begin{equation}
 \mbox{\textbf{\emph{E}}}_{pq}=\left\langle \emph{\textbf{e}}_{p}\otimes\emph{\textbf{e}}_{q}\right\rangle =\begin{pmatrix}\left\langle e_{px}e_{qx}^{*}\right\rangle  & \left\langle e_{px}e_{qy}^{*}\right\rangle \\
@@ -296,7 +294,7 @@ outer product ($\otimes$):
 \end{pmatrix}
 \end{equation}
  The resulting coherency matrix is then shown to be related to the
-Stokes parameters by $\mbox{\textbf{\emph{E}}}_{00}=\mbox{\textbf{\emph{B}}}$,
+Stokes parameters by $\mbox{\textbf{\emph{E}}}_{00}=\mbox{ \textsf{B} }$,
 where 
 \begin{align}
 \mathsf{B} & =\begin{pmatrix}I+Q & U+iV\\
@@ -335,10 +333,10 @@ result; we return to vC-Z later in this article.
 
   In \citet{Smirnov:2011d}, a generalized tensor formalism of the
 RIME is presented. The coherency of two voltages is once again defined
-via the outer product $e^{i}\bar{e}_{j}$, quite giving a (1,1)-type
+via the outer product $e^{i}\bar{e}_{j}$,  giving a (1,1)-type
 tensor expression:
 \begin{equation}
-\mbox{V}_{qj}^{pi}=\mbox{J}_{\alpha}^{pi}\mbox{B}_{\beta}^{\alpha}\bar{\mbox{J}}_{qj}^{\beta}.
+\mbox{\emph{V}}_{qj}^{pi}=\mbox{\emph{J}}_{\alpha}^{pi}\mbox{\emph{B}}_{\beta}^{\alpha}\bar{\mbox{\emph{J}}}_{qj}^{\beta}.
 \end{equation}
 This formalism is better capable of describing mutual coupling between
 antennas, beamforming, and wide field polarimetry. $ $ In this paper,
@@ -452,7 +450,7 @@ components in cascade. Diagram adapted from \citet{Pozar2005}\label{fig:transmis
 
 We now turn our attention to formulating a more general RIME that
 is valid in a larger range of cases. In this section, we introduce
-the coherence matrices of \citet{Wolf1954}, along with voltage-current
+the coherency matrices of \citet{Wolf1954}, along with voltage-current
 coherency matrices. The following section then formulates relationships
 between source brightness and measured coherency based upon these
 matrices.
@@ -460,8 +458,8 @@ matrices.
 
 \subsection{Electromagnetic coherency\label{sub:Electromagnetic-coherency}}
 
-To begin, we introduce the coherence matrices of \citet{Wolf1954},
-that fully describe the coherence statistics of an electromagnetic
+To begin, we introduce the coherency matrices of \citet{Wolf1954},
+that fully describe the coherency statistics of an electromagnetic
 field. We may start by introducing $\mbox{\textbf{\emph{e}}}(\mbox{\textbf{\emph{r}}},t)$
 and $\mbox{\textbf{\emph{h}}}(\mbox{\textbf{\emph{r}}},t)$ as the
 complex analytic representations of the electric and magnetic field
@@ -470,7 +468,7 @@ vectors at a spacetime point $(\mbox{\textbf{\emph{r}}},t)$:
 \mbox{\textbf{\emph{e}}}(\mbox{\textbf{\emph{r}}},t) & =\begin{pmatrix}e_{x}(\mbox{\textbf{\emph{r}}},t) & e_{y}(\mbox{\textbf{\emph{r}}},t) & e_{z}(\mbox{\textbf{\emph{r}}},t)\end{pmatrix}^{T}\label{eq:elec-vec}\\
 \mbox{\textbf{\emph{h}}}(\mbox{\textbf{\emph{r}}},t) & =\begin{pmatrix}h_{x}(\mbox{\textbf{\emph{r}}},t) & h_{y}(\mbox{\textbf{\emph{r}}},t) & h_{z}(\mbox{\textbf{\emph{r}}},t)\end{pmatrix}^{T}
 \end{align}
-The coherence matrices are then defined by the formulae
+The coherency matrices are then defined by the formulae
 \begin{align}
 \mbox{\textbf{\emph{E}}}_{pq}(\mbox{\textbf{\emph{r}}}_{p},\mbox{\textbf{\emph{r}}}_{q},\tau) & =\begin{pmatrix}\left\langle e_{j}^{*}(\mbox{\textbf{\emph{r}}}_{p},t)e_{k}^{*}(\mbox{\textbf{\emph{r}}}_{q},t+\tau)\right\rangle \end{pmatrix}\\
 \mbox{\textbf{\emph{H}}}_{pq}(\mbox{\textbf{\emph{r}}}_{p},\mbox{\textbf{\emph{r}}}_{q},\tau) & =\begin{pmatrix}\left\langle h_{j}^{*}(\mbox{\textbf{\emph{r}}}_{p},t)h_{k}^{*}(\mbox{\textbf{\emph{r}}}_{q},t+\tau)\right\rangle \end{pmatrix}\\
@@ -479,8 +477,8 @@ The coherence matrices are then defined by the formulae
 \end{align}
 Here, $j$ and $k$ are indices representing the $x,y,z$ subscripts
 from Cartesian coordinates. $\mbox{\textbf{\emph{E}}}_{pq}$ and $\mbox{\textbf{\emph{H}}}_{pq}$
-are called the electric and the magnetic coherence matrices, and $\mbox{\textbf{\emph{M}}}_{pq}$
-and $\mbox{\textbf{\emph{N}}}_{pq}$ are called the mixed coherence
+are called the electric and the magnetic coherency matrices, and $\mbox{\textbf{\emph{M}}}_{pq}$
+and $\mbox{\textbf{\emph{N}}}_{pq}$ are called the mixed coherency
 matrices. The subscripts $p$ and $q$ correspond to the spacetime
 points $(\mbox{\textbf{\emph{r}}}_{p},t)$ and $(\mbox{\textbf{\emph{r}}}_{q},t+\tau)$,
 respectively. We may arrange these into a single $\mbox{6}\times\mbox{6}$
@@ -496,7 +494,7 @@ at spacetime points $(\mbox{\textbf{\emph{r}}}_{p},t)$ and $(\mbox{\textbf{\emph
 \mbox{\textbf{\emph{N}}}_{pq} & \mbox{\textbf{\emph{H}}}_{pq}
 \end{pmatrix}\label{eq:coherency-matrix}
 \end{equation}
-This matrix fully describes the coherence properties of an electromagnetic
+This matrix fully describes the coherency properties of an electromagnetic
 field at two points in spacetime. We will refer to this matrix as
 the \emph{two point coherency matrix}. It is worth noting that:
 \begin{itemize}
@@ -528,8 +526,7 @@ One may model the analogue components of a telescope as a 6-port network,
 with three inputs ports and three output ports. We propose this so
 that there is an input-output pair of ports for each of the orthogonal
 components of the electromagnetic field. We can then define a set
-of voltages \textbf{\emph{v}}\emph{(t)} and currents\textbf{\emph{
-$\tilde{\mbox{\textbf{\emph{i}}}}$}}\emph{(t):}
+of voltages \textbf{\emph{v}}\emph{(t)} and currents $\tilde{\mbox{\textbf{\emph{i}}}}(t)$
 
 \begin{align}
 \mbox{\textbf{\emph{v}}}(t) & =\begin{pmatrix}v_{x}(t) & v_{y}(t) & v_{z}(t)\end{pmatrix}^{T}\\
@@ -561,7 +558,7 @@ block matrices
 \mbox{\textbf{\emph{V}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{j}^{*}(t)v_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
 \mbox{\textbf{\emph{I}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle \tilde{i}_{j}^{*}(t)\tilde{i}_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
 \mbox{\textbf{\emph{K}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{j}^{*}(t)\tilde{i}_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{J}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle \tilde{i}_{j}^{*}(t)v_{k}^{*}(t+\tau)\right\rangle \end{pmatrix},
+\mbox{\textbf{\emph{L}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle \tilde{i}_{j}^{*}(t)v_{k}^{*}(t+\tau)\right\rangle \end{pmatrix},
 \end{align}
 these are analogous to (and related to)\textbf{ }the electromagnetic
 coherency matrices above%
@@ -609,7 +606,7 @@ matrices, $\mathbb{T}_{p}$ and $\mathbb{T}_{q}$:
 \mbox{\textbf{\emph{f}}}_{p} & =\mathbb{T}_{p}\mbox{\textbf{\emph{f}}}_{0}\\
 \mbox{\textbf{\emph{f}}}_{q} & =\mathbb{T}_{q}\mbox{\textbf{\emph{f}}}_{0}
 \end{align}
-The coherence between the two signals $\mbox{\textbf{\emph{f}}}_{p}$
+The coherency between the two signals $\mbox{\textbf{\emph{f}}}_{p}$
 and $\mbox{\textbf{\emph{f}}}_{q}$ is then given by the matrix $\mathbb{W}_{pq}$:
 
 
@@ -631,7 +628,7 @@ we can write this in terms of block matrices
 \mbox{\textbf{\emph{C}}}_{q} & \mbox{\textbf{\emph{D}}}_{q}
 \end{pmatrix}^{H}\label{eq:two-pt-coherency}
 \end{equation}
-This is the most general form that relates the coherence at two points
+This is the most general form that relates the coherency at two points
 $\mbox{\textbf{\emph{r}}}_{p}$ and $\mbox{\textbf{\emph{r}}}_{q}$,
 to the electromagnetic energy density at point $\mbox{\textbf{\emph{r}}}_{0}$.
 
@@ -680,7 +677,7 @@ space have \textbf{\emph{E}}\textbf{ }and \textbf{\emph{H}}\textbf{
 \label{eq:MPWZ}
 \end{align}
 Where $c_{0}$ is the magnitude of the speed of light. In such a case,
-all coherence statistics can be derived from the $\mbox{2}\times\mbox{2}$
+all coherency statistics can be derived from the $\mbox{2}\times\mbox{2}$
 brightness matrix~$\mathsf{B}$. \citet{Carozzi:2009hf} show that
 the field coherencies can be written  
 \begin{align}
@@ -861,7 +858,7 @@ The coherency of two voltages is once again defined via the outer
 product $e^{i}\bar{e}_{j}$, quite remarkably giving a (1,1)-type
 tensor expression identical Eq.\ 9 of \citet{Smirnov:2011d}:
 \begin{equation}
-\mbox{V}_{qj}^{pi}=\mbox{J}_{\alpha}^{pi}\mbox{B}_{\beta}^{\alpha}\bar{\mbox{J}}_{qj}^{\beta}.
+\mbox{\emph{V}}_{qj}^{pi}=\mbox{\emph{J}}_{\alpha}^{pi}\mbox{\emph{B}}_{\beta}^{\alpha}\bar{\mbox{\emph{J}}}_{qj}^{\beta}.
 \end{equation}
 In the next section, we show an alternative RIME based upon a (2,0)-type tensor commonly encountered in special relativity. 
 
@@ -931,7 +928,7 @@ that are irreducible under Lorentz transformations. The physical interpretation 
 the brightness matrix is discussed in \citet{Bergman:2008p7859}, with regards to the aforementioned irreducible tensorial set.
 
 While the brightness tensor has redundancy not present in the tensorial set of \citet{Carozzi:2006bj}, we shall continue to use it
-as a basis to our relativistic RIME for clarity of analogy to the brightness coherence matrix of Eq.~\ref{eq:RIME-basic}, and as
+as a basis to our relativistic RIME for clarity of analogy to the brightness coherency matrix of Eq.~\ref{eq:RIME-basic}, and as
 it leads to a relativistic RIME for which we can define transformation tensors analogous to Jones matrices. The redundancy 
 can be described by a number of symmetry properties of the brightness tensor: it is 
 (a) \emph{Hermitian} with respect to swapping the  first and second pair of indices:
@@ -944,7 +941,6 @@ B^{\alpha\beta\gamma\delta} = \bar{B}^{\gamma\delta\alpha\beta},
 B^{\alpha\beta\gamma\delta} =  -B^{\beta\alpha\gamma\delta} = -B^{\alpha\beta\delta\gamma}
 \label{eq:BT-antisym}
 \end{equation}
-
 To see the direct analogy to the brightness matrix, consider again the case of the monochromatic plane wave propagating 
 along $\bmath{z}$ (Eq.~\ref{eq:MPWZ}). The EMF tensor then takes a particularly simple form:
 \begin{equation}
@@ -956,7 +952,6 @@ e_{y} & 0        & 0        & e_y \\
 0       & -e_{x} & -e_y   & 0
 \end{array}\right),
 \end{equation}
-
 and the brightness tensor has only $8^2=64$ non-zero components, with the additional `0-3' symmetry property:
 \begin{eqnarray}
 B^{0\beta\gamma\delta} = B^{3\beta\gamma\delta} && B^{\alpha0\gamma\delta} = B^{\alpha3\gamma\delta} \nonumber\\
@@ -1001,12 +996,9 @@ plane wave. Rows correspond to $\alpha\beta$, columns to $\gamma\delta$.}
 
 So far this has been nothing more than a recasting of the RIME using EMF tensors. Consider, however, the case where antennas $p$ and $q$ measure the signal in different inertial reference frames. The EMF tensor observed by
 antenna $p$ becomes
-
-
 \[
 [F_p]^{\alpha\beta} = [\Lambda_p]^\alpha_{\alpha'} [\Lambda_p]^\beta_{\beta'} [F_0]^{\alpha'\beta'},
 \]
-
 where $[\Lambda_p]^\alpha_\mu$ is the Lorentz tensor corresponding to the transform between the signal frame and the
 antenna frame. Since the same Lorentz tensor always appears twice in these equations (due to $F$ being a (2,0)-type tensor), let us designate
 \begin{equation}
@@ -1184,16 +1176,16 @@ and $S_{22}$ parameters have a magnitude of -10~dB, and the $S_{12}$
 and $S_{21}$ parameters have a magnitude of about $-0.5$~dB. Now
 suppose we have three identical copies of this component, and we connect
 them together in cascade. If one only considered the forward gain
-($S_{21}$), one would arrive at an overall $S_{21tot}$ of
+($S_{21}$), one would arrive at an overall $S_{\rm{21tot}}$ of
 \begin{equation}
-S_{21tot}=S_{21}S_{21}S_{21}=0.729
+S_{\rm{21tot}}=S_{21}S_{21}S_{21}=0.729
 \end{equation}
 In contrast, using the standard microwave engineering methods, we
 can form a transmission matrix (using equations \ref{eq:s-to-t-first}-\ref{eq:s-to-t-last}
-above), and then convert this back into an overall matrix, $\mbox{\textbf{\emph{S}}}_{tot}$.
+above), and then convert this back into an overall matrix, $\mbox{\textbf{\emph{S}}}_{\rm{tot}}$.
 By doing this, one finds
 \begin{equation}
-\mbox{\textbf{\emph{S}}}_{cas}=\begin{pmatrix}0.25\angle0^{\circ} & 0.75\angle0^{\circ}\\
+\mbox{\textbf{\emph{S}}}_{\rm{cas}}=\begin{pmatrix}0.25\angle0^{\circ} & 0.75\angle0^{\circ}\\
 0.75\angle0^{\circ} & 0.25\angle0^{\circ}
 \end{pmatrix}.
 \end{equation}
@@ -1224,8 +1216,8 @@ three possible states: antenna, load, and diode + load. These three states are u
 Now we have shown how scattering parameters can be used within the 2N-port RIME, we turn our attention to 
 the challenges of absolute calibration of radio telescopes. Measurement of the absolute flux of radio sources is fiendishly hard; 
 as such, almost all calibrated flux data presented in radio astronomy literature are pinned to the flux scale presented 
-in \citet{Baars:1977}, either directly or indirectly \citep{Kellermann:2009}. Recent experiments, such as EDGES \citep{Bowman:2010},
-and LEDA \citep{leda2012}, are seeking to make precision measurement of the sky temperature (i.e. total power of the
+in \citet{Baars:1977}, either directly or indirectly \citep{Kellermann:2009}. Recent experiments, such as the Experiment to Detect the Global EoR Step (EDGES, \citealt{Bowman:2010}),
+and the Large-Aperture Experiment to detect the Dark Ages (LEDA, \citealt{leda2012}), are seeking to make precision measurement of the sky temperature (i.e. total power of the
 sky brightness) as a function of frequency. The motivation for this is to detect predicted faint (mK) spectral features imprinted
 on the sky temperature due to coupling between the microwave background and neutral Hydrogen in the early universe.
 For such instruments --- and other instruments with wide field-of-views --- this flux `bootstrapping' method is not sufficient.
@@ -1247,12 +1239,12 @@ and a reference load and noise diode, and measuring the resultant power spectra
 ($P_{A}$, $P_{L}$, and $P_{D}$, respectively). This is shown as a block diagram in Figure~\ref{fig:three-switch}.
 The power as measured in each state is then given by:
 \begin{eqnarray}
-P_{A} & = & Gk_{B}\Delta\nu(T_{A}+T_{rx})\label{eq:pow-ant}\\
-P_{L} & = & Gk_{B}\Delta\nu(T_{L}+T_{rx})\\
-P_{D} & = & Gk_{B}\Delta\nu(T_{D}+T_{L}+T_{rx}\label{eq:pow-diode})
+P_{A} & = & Gk_{B}\Delta\nu(T_{A}+T_{\rm{rx}})\label{eq:pow-ant}\\
+P_{L} & = & Gk_{B}\Delta\nu(T_{L}+T_{\rm{rx}})\\
+P_{D} & = & Gk_{B}\Delta\nu(T_{D}+T_{L}+T_{\rm{rx}}\label{eq:pow-diode})
 \end{eqnarray}
 where $k_B$ is the Boltzmann constant, $T_D$ and $T_L$ are the diode and reference load noise temperatures,
-$T_{rx}$ is the receiver's noise temperature, $G$ is the system gain, 
+$T_{\rm{rx}}$ is the receiver's noise temperature, $G$ is the system gain, 
 and $\Delta\nu$ is bandwidth. One can recover the antenna temperature $T_{A}$ by 
 \begin{equation}
 T_{A}=T_{D}\frac{P_{A}-P_{L}}{P_{D}-P_{L}}+T_{L}\label{eq:ant-temp},
@@ -1260,7 +1252,7 @@ T_{A}=T_{D}\frac{P_{A}-P_{L}}{P_{D}-P_{L}}+T_{L}\label{eq:ant-temp},
 where the diode and load temperatures, $T_D$ and $T_L$, are known. Antenna temperature is then related to the
 sky temperature by
 \begin{equation}
-T_{sky}=T_{A}(1-|\Gamma|^2),\label{eq:sky-ant}
+T_{\rm{sky}}=T_{A}(1-|\Gamma|^2),\label{eq:sky-ant}
 \end{equation}
 where the reflection coefficient $\Gamma\equiv S_{11}$. Failure to account for reflections (i.e. impedance mismatch)
 results in an unsatisfactory calibration, due to standing waves within the coaxial cable that manifest as 
@@ -1293,15 +1285,14 @@ effects. This ability to put all instrumental effects into a single ME may open 
 such as Markov-chain Monte Carlo (MCMC). 
 
 \begin{figure*}
-\subfloat[The three switching states of a LEDA antenna\label{fig:leda-shc}.]{\includegraphics[width=0.99\columnwidth]{figures-leda-shc}
+\subfloat[ \label{fig:leda-shc}.]{\includegraphics[width=0.99\columnwidth]{figures-leda-shc}
 
-}\subfloat[Standing wave residuals from switched calibration. ]{\includegraphics[width=0.99\columnwidth]{figures-leda-residuals}}
+}\subfloat[  ]{\includegraphics[width=0.99\columnwidth]{figures-leda-residuals}}
 
 \protect\caption{ (a) Data from a LEDA three-state switched antenna during a testing campaign in December, 2013. These correspond to 
 the $P_A$, $P_L$, and $P_D$ of Eqns.~\ref{eq:pow-ant}-\ref{eq:pow-diode}.
 (b) Residuals after applying Eq.~\ref{eq:ant-temp}, to the data shown in Fig.~\ref{fig:leda-shc} and removing an antenna model power-law fit.
-The fast varying sinusoid can be attributed standing waves along the $\sim$300 m of coaxial cable connecting the antenna to the back-end electronics. The sharp negative spikes are due to radio interference. Precise calibration requires careful treatment of impedance mismatches
-within the analogue systems; this cannot be done with Jones calculus.\label{fig:leda-all}}
+The fast varying sinusoid can be attributed standing waves along the $\sim$300 m of coaxial cable connecting the antenna to the back-end electronics; the sharp negative spikes are due to radio interference.\label{fig:leda-all}}
 
 \end{figure*}
 
