@@ -251,6 +251,7 @@ in §\ref{sub:Electromagnetic-coherency} below. The column vector
 of a point source at $\mbox{\textbf{\emph{r}}}_{0}$ is then $\mbox{\textbf{\emph{e}}}_{00}$;
 that is, $p=q$ and $\tau=0$. The vector $\mbox{\textbf{\emph{e}}}_{00}$
 is related to the Stokes vector by the transform
+\footnote{Here, $j=\sqrt{-1}$, to avoid confusion with current, $i$.}.
 \begin{equation}
 \begin{pmatrix}I\\
 Q\\
@@ -259,7 +260,7 @@ V
 \end{pmatrix}=\begin{pmatrix}1 & 0 & 0 & 1\\
 1 & 0 & 0 & -1\\
 0 & 1 & 1 & 0\\
-0 & -i & i & 0
+0 & -j & j & 0
 \end{pmatrix}\begin{pmatrix}\left\langle e_{0x}e_{0x}^{*}\right\rangle \\
 \left\langle e_{0x}e_{0y}^{*}\right\rangle \\
 \left\langle e_{0y}e_{0x}^{*}\right\rangle \\
@@ -369,18 +370,15 @@ v_{N}
 Z_{21} & \ddots &  & \vdots\\
 \vdots &  &  & \vdots\\
 Z_{N1} & \cdots & \cdots & Z_{NN}
-\end{pmatrix}\begin{pmatrix}\tilde{i}_{1}\\
-\tilde{i}_{2}\\
+\end{pmatrix}\begin{pmatrix}i_{1}\\
+i_{2}\\
 \vdots\\
-\tilde{i}_{N}
+i_{N}
 \end{pmatrix},
 \end{equation}
 where $Z_{ab}$ is the port-to-port impedance from port \emph{a }to
-port \emph{b}, $v_{n}$ is the voltage on port $n$, and $\tilde{i}_{n}$
-is the current%
-\footnote{To avoid confusion with $i=\sqrt{-1}$, current is denoted with a
-tilde, $\tilde{i}$.%
-}. A common example of a 2-port network is a coaxial cable, and a common
+port \emph{b}, $v_{n}$ is the voltage on port $n$, and $i_{n}$
+is the current. A common example of a 2-port network is a coaxial cable, and a common
 3-port network is the Wilkinson power divider. 
 
 The analogue components of most radio telescopes can be considered
@@ -390,11 +388,11 @@ the voltages and currents of a 2-port network:
 
 \begin{equation}
 \begin{pmatrix}v_{1}\\
-\tilde{i}_{1}
+i_{1}
 \end{pmatrix}=\begin{pmatrix}A & B\\
 C & D
 \end{pmatrix}\begin{pmatrix}v_{2}\\
-\tilde{i}_{2}
+i_{2}
 \end{pmatrix},
 \end{equation}
 this is shown in Figure~\ref{fig:transmission-cascade}. If two 2-port
@@ -403,13 +401,13 @@ then the output is equal to the product of the transmission matrices
 representing the individual components:
 \begin{equation}
 \begin{pmatrix}v_{1}\\
-\tilde{i}_{1}
+i_{1}
 \end{pmatrix}=\begin{pmatrix}A_{1} & B_{1}\\
 C_{1} & D_{1}
 \end{pmatrix}\begin{pmatrix}A_{2} & B_{2}\\
 C_{2} & D_{2}
 \end{pmatrix}\begin{pmatrix}v_{2}\\
-\tilde{i}_{2}
+i_{2}
 \end{pmatrix},
 \end{equation}
 as is shown in texts such as \citet{Pozar2005}. The elements in the
@@ -530,7 +528,7 @@ of voltages \textbf{\emph{v}}\emph{(t)} and currents $\tilde{\mbox{\textbf{\emph
 
 \begin{align}
 \mbox{\textbf{\emph{v}}}(t) & =\begin{pmatrix}v_{x}(t) & v_{y}(t) & v_{z}(t)\end{pmatrix}^{T}\\
-\tilde{\mbox{\textbf{\emph{i}}}}(t) & =\begin{pmatrix}\tilde{i}_{x}(t) & \tilde{i}_{y}(t) & \tilde{i}_{z}(t)\end{pmatrix}^{T}.
+\tilde{\mbox{\textbf{\emph{i}}}}(t) & =\begin{pmatrix}i_{x}(t) & i_{y}(t) & i_{z}(t)\end{pmatrix}^{T}.
 \end{align}
 In practice, most telescopes are single or dual polarization, so only
 the $x$ and $y$ components are sampled. Nonetheless, it is possible
@@ -556,9 +554,9 @@ block matrices
 
 \begin{align}
 \mbox{\textbf{\emph{V}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{j}^{*}(t)v_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{I}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle \tilde{i}_{j}^{*}(t)\tilde{i}_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{K}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{j}^{*}(t)\tilde{i}_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{L}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle \tilde{i}_{j}^{*}(t)v_{k}^{*}(t+\tau)\right\rangle \end{pmatrix},
+\mbox{\textbf{\emph{I}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle i_{j}^{*}(t)i_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
+\mbox{\textbf{\emph{K}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{j}^{*}(t)i_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
+\mbox{\textbf{\emph{L}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle i_{j}^{*}(t)v_{k}^{*}(t+\tau)\right\rangle \end{pmatrix},
 \end{align}
 these are analogous to (and related to)\textbf{ }the electromagnetic
 coherency matrices above%
@@ -758,45 +756,45 @@ Consider that Jones calculus essentially asserts two things:
 \begin{itemize} 
 \item The voltage 2-vector at the output of a dual-polarization system $\bmath{v}_p=(v_{p1},v_{p2})^T$ 
 is linear with respect to the EMF 2-vector $\bmath{e}=(e_x,e_y)^T$ at the input of the system:
-\[
+\begin{equation}
 \bmath{v}_p = \bmath{J}_p \bmath{e},
-\]
+\end{equation}
 where the Jones matrix $\bmath{J}_p$ describes the voltage transmission properties of the system, and
 \item For a system composed of $n$ components, the effective Jones matrix is a product of the Jones matrices of the 
 components:
-\[
+\begin{equation}
 \bmath{v}_p = \bmath{J}_{np} \cdots \bmath{J}_{1p} \bmath{e}.
-\]
+\end{equation}
 \end{itemize}
 With 2N-port transmission matrices, we instead describe the input of the system by the 4-vector $[\bmath{e},\bmath{h}]^T$, 
 which for a monochromatic plane wave is equal to 
-\[
+\begin{equation}
 \begin{pmatrix}\bmath{e}\\ \bmath{h}\end{pmatrix} =
 (e_x,e_y,-e_y/c_0,e_x/c_0)^T = 
 \begin{pmatrix}\bmath{e}\\ \bmath{F}\bmath{e}\end{pmatrix}, 
-\]
+\end{equation}
 and the output of the system is a 4-vector of 2 voltages and 2 currents $(\bmath{v}_p,\tilde{\bmath{i}}_p)^T$, which is
 linear with respect to the input:
-\[
+\begin{equation}
 \begin{pmatrix}\bmath{v}_p\\ \tilde{\bmath{i}}_p\end{pmatrix} =
 \begin{pmatrix}\bmath{A}_p & \bmath{B}_p\\ \bmath{C}_p & \bmath{D}_p \end{pmatrix} 
 \begin{pmatrix}\bmath{e}\\ \bmath{F}\bmath{e}\end{pmatrix}.
-\]
+\end{equation}
 Note that the output voltage is still linear with respect to the input $\bmath{e}$. Indeed, if one is only interested 
 in the voltage, the above becomes
-\[
+\begin{equation}
 \bmath{v}_p = (\bmath{A}_p+\bmath{B}_p\bmath{F})\bmath{e},
-\]
+\end{equation}
 i.e. the system has an effective Jones matrix (i.e. a voltage transmission matrix) of
-\[
+\begin{equation}
 \bmath{J}_p = \bmath{A}_p+\bmath{B}_p\bmath{F}.
-\]
+\end{equation}
 However, the Jones formalism breaks down when the system is composed of multiple components. For example, with 2 
 components, we may naively attempt to apply Jones calculus, and describe the voltage transmission matrix of the 
 system as a product of the components' voltage transmission matrices:
-\[
+\begin{equation}
 \bmath{J}_p = (\bmath{A}_{2p}+\bmath{B}_{2p}\bmath{F})(\bmath{A}_{1p}+\bmath{B}_{1p}\bmath{F}),
-\]
+\end{equation}
 i.e.
 \begin{equation}
 \bmath{v}_p = (
@@ -806,12 +804,12 @@ i.e.
 \end{equation}
 This, however, completely neglects the current transmission properties. Applying the 2N-port transmission matrix 
 formalism, we can see the difference:
-\[
+\begin{equation}
 \begin{pmatrix}\bmath{v}_p\\ \tilde{\bmath{i}}_p\end{pmatrix} =
 \begin{pmatrix}\bmath{A}_{2p} & \bmath{B}_{2p}\\ \bmath{C}_{2p} & \bmath{D}_{2p} \end{pmatrix} 
 \begin{pmatrix}\bmath{A}_{1p} & \bmath{B}_{1p}\\ \bmath{C}_{1p} & \bmath{D}_{1p} \end{pmatrix} 
 \begin{pmatrix}\bmath{e}\\ \bmath{F}\bmath{e}\end{pmatrix},
-\]
+\end{equation}
 from which we can derive an expression for the voltage vector:
 \begin{equation}
 \bmath{v}_p = 
@@ -884,14 +882,14 @@ e_{z}/c & -h_{y} & h_{x} & 0
 The advantage of this formulation is that the EMF tensor follows standard coordinate transform laws of special 
 relativity. That is, for a different inertial reference frame given by the Lorentz transformation tensor 
 $\Lambda^\alpha_{\alpha'}$, the EMF tensor transforms as:
-\[
+\begin{equation}
 F'^{\alpha\beta} = \Lambda^\alpha_{\alpha'} \Lambda^\beta_{\beta'} F^{\alpha'\beta'}. 
-\]
+\end{equation}
 The measured 2-point coherency between $[F_p]$ and $[F_q]$ can be formally defined as the average of the 
 outer product:
-\[
+\begin{equation}
 [V_{pq}]^{\alpha\beta\gamma\delta} = 2 c^2 \langle [F_p]^{\alpha\beta}[F^H_q]^{\gamma\delta} \rangle, 
-\]
+\end{equation}
 where $\cdot^H$ represents the conjugate tensor, i.e. $[F^H]^{\gamma\delta}=\bar{F}^{\delta\gamma}$. A factor of 2
 is introduced for the same reasons as in \citet{Smirnov:2011a}, and the reason for $c^2$ will be apparent below. 
 Note that the indices in the brackets should be treated as labels, while those outside the brackets are proper tensor indices. 
@@ -996,9 +994,9 @@ plane wave. Rows correspond to $\alpha\beta$, columns to $\gamma\delta$.}
 
 So far this has been nothing more than a recasting of the RIME using EMF tensors. Consider, however, the case where antennas $p$ and $q$ measure the signal in different inertial reference frames. The EMF tensor observed by
 antenna $p$ becomes
-\[
+\begin{equation}
 [F_p]^{\alpha\beta} = [\Lambda_p]^\alpha_{\alpha'} [\Lambda_p]^\beta_{\beta'} [F_0]^{\alpha'\beta'},
-\]
+\end{equation}
 where $[\Lambda_p]^\alpha_\mu$ is the Lorentz tensor corresponding to the transform between the signal frame and the
 antenna frame. Since the same Lorentz tensor always appears twice in these equations (due to $F$ being a (2,0)-type tensor), let us designate
 \begin{equation}
@@ -1025,18 +1023,18 @@ above would be
 \label{eq:RRIME-J}
 \end{equation}
 where tensor conjugation $\cdot^H$ is defined as:
-\[
+\begin{equation}
 [J^H]^{\alpha\beta}_{\alpha'\beta'}=\bar{J}^{\beta\alpha}_{\beta'\alpha'}.
-\]
+\end{equation}
 Note that both the $K$ and $\Lambda$ terms of Eq.~\ref{eq:RRIME-KL} can be considered as special 
 examples of Jones tensors. The $K$ term can be explicitly written as a (2,2)-type tensor via two Kronecker deltas:
-\[
+\begin{equation}
 [K_p]^{\alpha\beta}_{\alpha'\beta'} = K_p \delta^{\alpha}_{\alpha'}\delta^{\beta}_{\beta'},
-\] 
+\end{equation} 
 while the $\Lambda$ term is a (2,2)-type tensor by definition (Eq.~\ref{eq:LL}), noting that
-\[
+\begin{equation}
 [\Lambda^H_p]^{\alpha\beta}_{\alpha'\beta'} = [\Lambda_p]^{\alpha\beta}_{\alpha'\beta'},
-\]
+\end{equation}
 since the components of any Lorentz transformation tensor $\Lambda^{\alpha}_{\alpha'}$ are real. 
 
 Finally, let us note the equivalent of the `chain rule' for Jones tensors. If the signal chain is represented by 
@@ -1315,13 +1313,13 @@ frame is then
 \label{eq:Lboost}
 \end{equation}
 where
-\[
+\begin{equation}
 \beta = \frac{v}{c},~~\gamma=\frac{1}{\sqrt{1-\beta^2}}.
-\]
+\end{equation}
 The Lorentz factor $\gamma$ is unity 1 at $v=0$, and goes to infinity with $v\rightarrow c$. This case can be analyzed without
 invoking coherencies. Consider the EMF, which in the signal frame is a plane wave (Eq.~\ref{eq:F-planewave}). In the antenna frame it becomes
 
-\[
+\begin{equation}
 [F_p]^{\alpha\beta} = \frac{1}{c} 
 \left(\begin{array}{cccc}
 0 				& -e_x 					& -\gamma e_y 	  	& -\beta \gamma e_x \\
@@ -1329,9 +1327,9 @@ e_x 			& 0 					& \beta\gamma e_y 	& \gamma e_x \\
 \gamma e_y 		& -\beta\gamma e_y 		& 0 				& e_y \\
 \beta\gamma e_x & -\gamma e_x 			& -e_y 				& 0
 \end{array}\right ) .
-\] 
+\end{equation} 
 Noting that 
-\[
+\begin{equation}
 \left(\begin{array}{ccc}
 \gamma^{-1} & 0 & \beta \\
 0 & 1 & 0 \\
@@ -1347,9 +1345,9 @@ e_x \\
 e_y \\
 0
 \end{array}\right ),
-\]
+\end{equation}
 and
-\[
+\begin{equation}
 \left(\begin{array}{ccc}
 \gamma^{-1} & 0 & \beta \\
 0 & 1 & 0 \\
@@ -1365,7 +1363,7 @@ and
 e_x\\
 0
 \end{array}\right ),
-\]
+\end{equation}
 and $\gamma^{-2}+\beta^2=1,$ we can see that the EMF in the antenna frame is equivalent to a boost of the original EMF 
 by $\gamma$ (also called {\em Doppler boost}), coupled to a rotation through $\phi=-\cos^{-1}\beta$ in the $xz$ plane (i.e. the
 direction of propagation appears to change, also called {\em relativistic aberration}). Both effects
@@ -1380,13 +1378,13 @@ with velocity $v$. The $[J_q]^{\gamma\delta}_{\gamma'\delta'}$ tensor in Eq. ~\r
 of two Lorentz tensors of the form of Eq.~\ref{eq:Lboost}. In the absence of other effects, the measured 
 coherency becomes 
 
-\[
+\begin{equation}
 [V_{pq}]^{\alpha\beta\gamma\delta} = 
 B^{\alpha\beta\gamma'\delta'}
 [\Lambda_q]^\gamma_{\gamma'} [\Lambda_q]^\delta_{\delta'},
-\]
+\end{equation}
 or writing it out as an explicit sum for two particular elements of interest (and dropping the $pq$ indices):
-\begin{eqnarray*}
+\begin{eqnarray}
 V^{0110} & = & \sum_{\gamma\delta}
 B^{01\gamma\delta}
 [\Lambda_q]^{0}_{\gamma} 
@@ -1395,23 +1393,23 @@ V^{0220} & = & \sum_{\gamma\delta}
 B^{02\gamma\delta}
 [\Lambda_q]^{0}_{\gamma} 
 [\Lambda_q]^{2}_{\delta}.
-\end{eqnarray*}
+\end{eqnarray}
 Each sum above nominally contains 16 terms, but if we assume an unpolarized point source, then from Table~\ref{tab:BT} (looking up rows `01' and `02') we note that only four components of $B$ in each sum are non-zero. Combining this with Eq.~\ref{eq:Lboost}, we get:
-\[
+\begin{equation}
 V^{0110} = I(\gamma^2 - \beta^2\gamma^2) = I, 
-\]
+\end{equation}
 and
-\[
+\begin{equation}
 V^{0220} = I\gamma.
-\] 
+\end{equation} 
 Doing the same sums for $V^{0120}$ and $V^{0210}$, we arrive at zero. This implies that our instrument will 
 measure the Stokes parameters as
-\begin{eqnarray*}
+\begin{eqnarray}
 I_\mathrm{meas} &=& \frac{V^{0110}+V^{0220}}{2} = I\frac{1+\gamma}{2} \\ 
 Q_\mathrm{meas} &=& \frac{V^{0110}-V^{0220}}{2} = I\frac{1-\gamma}{2} \\
 U_\mathrm{meas} &=& 0 \\
 V_\mathrm{meas} &=& 0.
-\end{eqnarray*}
+\end{eqnarray}
 
 Since $\gamma>1$, we measure boost in the total power $I$, and negative apparent $Q$ (that is, linear polarization 
 perpendicular to the direction of motion). The physical meaning of this instrumental $Q$ can be understood in
