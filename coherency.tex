@@ -86,7 +86,7 @@ $^3$SKA South Africa, 3rd Floor, The Park, Park Road, Pinelands, 7405, South Afr
 
 \label{firstpage}
 \begin{abstract}
-The Radio Interferometer Measurement Equation (RIME) is a matrix based mathematical
+The Radio Interferometer Measurement Equation (RIME) is a matrix-based mathematical
 model that describes the response of a radio interferometer.  The Jones
 calculus it employs is not suitable for describing the analogue components
 of a telescope. This is because it does not consider the effect of impedance
@@ -100,7 +100,8 @@ We elucidate the limitations of the Jones-matrix-based RIME for describing analo
 measured scattering parameters of analogue components can be used in a 2N-port version of the RIME. In addition, we 
 show how motion at relativistic speed affects the observed flux.  
 We present reformulations of the RIME that correctly account for magnetic field coherency. 
-These reformulations extend the standard formulation and highlight its limitations.
+These reformulations extend the standard formulation, highlight its limitations, and may have applications in
+space-based interferometry and precise absolute calibration experiments.
    
 \end{abstract}
 
@@ -133,7 +134,7 @@ each polarization essentially treated separately. The framework was
 expounded in a series of follow-up papers \citep{Sault:1996p5731,Hamaker:1996p5733,Hamaker:2000p7625,Hamaker:2006p7626}; recent work by Smirnov extends the formalism to the full sky case,
 and reformulates the RIME using tensor algebra \citep{Smirnov:2011a,Smirnov:2011d}. 
 
-This article introduces two reformulations of the RIME, that extend its applicability and illustrate
+This article introduces two reformulations of the RIME, that extend its applicability and demonstrates
 limitations with the Jones-matrix-based formalism. 
 Both of these reformulations consider full electromagnetic coherency statistics
 (i.e. electric, magnetic and mixed coherencies). The first is inspired by transmission matrix methods
@@ -164,7 +165,7 @@ showed that Mueller and Jones calculuses provide a good framework for
 modelling radio interferometers. In optics, Jones and Mueller matrices
 are used to model the transmission of light through optical elements
 \citep{Jones1941,Mueller1948}. Mueller matrices are $\mbox{4}\times\mbox{4}$
-matrices which act upon the Stokes vector 
+matrices that act upon the Stokes vector 
 \begin{equation}
 \mbox{\textbf{\emph{s}}}=\begin{pmatrix}I & Q & U & V\end{pmatrix}^{T},
 \end{equation}
@@ -189,7 +190,7 @@ which can be collapsed into a single matrix when required.
 
 The RIME uses Jones matrices to model the various corruptions and
 effects during a signal's journey from a source right though to the
-correlator. A block diagram for a (simplified) two element interferometer
+correlator. A block diagram for a (simplified) two-element interferometer
 is shown in Figure~\ref{fig:RIME-cartoon}. From left to right, the
 figure shows the journey of a signal from a source right through to
 the correlator. The radiation from the source is picked up by two
@@ -240,7 +241,7 @@ are the Jones matrices representing all transformations along the
 two signal paths, and $\left(\mbox{\textbf{\emph{J}}}_{p}\star\mbox{\textbf{\emph{J}}}_{q}\right)$
 is a $\mbox{4}\times\mbox{4}$ matrix. Here, $\mbox{\textbf{\emph{e}}}_{00}$
 is the sky brightness of a single point source of radiation. For
-a multi element interferometer, every antenna has its own unique Jones
+a multi-element interferometer, every antenna has its own unique Jones
 matrix, and a RIME may be written for every pair of antennas.
 
 Due to their choice of outer product, Hamaker et. al. arrive at a
@@ -256,8 +257,7 @@ as opposed to the coherency matrix of \citet{Wolf1954}; this is introduced
 in §\ref{sub:Electromagnetic-coherency} below. The column vector
 of a point source at $\mbox{\textbf{\emph{r}}}_{0}$ is then $\mbox{\textbf{\emph{e}}}_{00}$;
 that is, $p=q$ and $\tau=0$. The vector $\mbox{\textbf{\emph{e}}}_{00}$
-is related to the Stokes vector by the transform
-\footnote{Here, $j=\sqrt{-1}$, to avoid confusion with current, $i$.}.
+is related to the Stokes vector by the transform\footnote{Here, $j=\sqrt{-1}$, to avoid confusion with current, $i$, used later.}.
 \begin{equation}
 \begin{pmatrix}I\\
 Q\\
@@ -318,7 +318,7 @@ or more simply,
 \end{equation}
 This approach avoids the need to use $\mbox{4}\times\mbox{4}$ Mueller
 matrices, so is both simpler and computationally advantageous. This
-form is also cleaner in appearance, as less indices are required.
+form is also cleaner in appearance, as fewer indices are required.
 
 \citet{Smirnov:2011a} takes the $\mbox{2}\times\mbox{2}$ version
 of the RIME as a starting point and extends the RIME to a full sky
@@ -433,7 +433,7 @@ be modelled through multiplication of matrices representing discrete
 components. While the Jones matrix acts upon a pair of orthogonal
 electric field components, the $ABCD$ matrix acts upon a voltage-current	
 pair at a single port. As Jones matrices do not consider changes in
-impedance (free-space impedance is implicitly assumed), it is not
+impedance (free space impedance is implicitly assumed), it is not
 suitable for describing analogue components. Conversely, the $2\times2$
 $ABCD$ matrix cannot model cross-polarization response of a telescope.
 In the section that follows, we derive a more general coherency relationship
@@ -513,7 +513,9 @@ of electromagnetic field data from spacecraft.
 and $\tau=0$, and we choose a coordinate system with $z$ in the
 direction of propagation (i.e. along the Poynting vector), $\textbf{\emph{E}}_{pq}$ 
 becomes what \citet{Smirnov:2011a} refers to as the \emph{brightness
-matrix}, $\mathsf{B}$. From here forward, we drop the subscript $\mathbb{B}=\mathbb{B}_{00}$ and shall refer to 
+matrix}, $\mathsf{B}$. 
+
+From here forward, we drop the subscript $\mathbb{B}=\mathbb{B}_{00}$ and shall refer to 
 this as the \emph{brightness coherency} to highlight its relationship with $\mathsf{B}$.
 \end{itemize}
 
@@ -756,21 +758,19 @@ This is similar to, but more general than, Jones calculus. In the following sect
 
 \subsection{Limitations of Jones calculus}
 
-Consider that Jones calculus essentially asserts two things:
-
-\begin{itemize} 
-\item The voltage 2-vector at the output of a dual-polarization system $\bmath{v}_p=(v_{p1},v_{p2})^T$ 
+Jones calculus essentially asserts two things. Firstly, it asserts that the voltage 2-vector at the output of a 
+dual-polarization system $\bmath{v}_p=(v_{p1},v_{p2})^T$ 
 is linear with respect to the EMF 2-vector $\bmath{e}=(e_x,e_y)^T$ at the input of the system:
 \begin{equation}
 \bmath{v}_p = \bmath{J}_p \bmath{e},
 \end{equation}
-where the Jones matrix $\bmath{J}_p$ describes the voltage transmission properties of the system, and
-\item For a system composed of $n$ components, the effective Jones matrix is a product of the Jones matrices of the 
-components:
+where the Jones matrix $\bmath{J}_p$ describes the voltage transmission properties of the system.
+The second assertion is that for a system composed of $n$ components, the effective Jones matrix 
+is a product of the Jones matrices of the components:
 \begin{equation}
 \bmath{v}_p = \bmath{J}_{np} \cdots \bmath{J}_{1p} \bmath{e}.
 \end{equation}
-\end{itemize}
+
 With 2N-port transmission matrices, we instead describe the input of the system by the 4-vector $[\bmath{e},\bmath{h}]^T$, 
 which for a monochromatic plane wave is equal to 
 \begin{equation}
@@ -1262,31 +1262,30 @@ where the reflection coefficient $\Gamma\equiv S_{11}$. Failure to account for r
 results in an unsatisfactory calibration, due to standing waves within the coaxial cable that manifest as 
 a sinusoidal ripple on $T_A = T_{A}(\nu)$. This effect is a prime example why one must not use Jones matrices
 to describe analogue components separately; an example showing a standing wave present on three-state switch
-calibrated LEDA spectrum is shown in Figure~\ref{fig:leda-all}.
+calibrated spectrum from a prototype LEDA antenna is shown in Figure~\ref{fig:leda-all}.
 
 We may instead write the equations above in terms of 2N-port transmission matrices, and form MEs for the 
 three states:
 \begin{eqnarray}
-\mathbf{V}_{A} & = & \mathbf{G}\mathbf{A}\mathbb{B}_{sky}\mathbf{A}^{H}\mathbf{G}^{H}\label{eq:switchmat1}\\
-\mathbf{V}_{L} & = & \mathbf{G}\mathbb{B}_{L}\mathbf{G}^{H}\\
-\mathbf{V}_{D} & = & \mathbf{G}(\mathbf{L}\mathbb{B}_{D}\mathbf{L}^{H}+\mathbb{B}_{L})\mathbf{G}^{H}\label{eq:switchmat3}.
+\mathbf{V}_{A} & = & \mathbf{G}(\mathbf{T}_A\mathbb{B}_{\rm{sky}}\mathbf{T}_A^{H} + \mathbb{B}_{\rm{rx}})\mathbf{G}^{H}\label{eq:switchmat1}\\
+\mathbf{V}_{L} & = & \mathbf{G}(\mathbb{B}_{L} + \mathbb{B}_{\rm{rx}})\mathbf{G}^{H}\\
+\mathbf{V}_{D} & = & \mathbf{G}(\mathbf{T}_L\mathbb{B}_{D}\mathbf{T}_L^{H}+\mathbb{B}_{L} + \mathbb{B}_{\rm{rx}})\mathbf{G}^{H}\label{eq:switchmat3}.
 \end{eqnarray}
 Here, we have replaced the scalar powers $P_{A,L,D}$ with corresponding voltage-coherency matrices $\mathbf{V}_{A,L,D}$, 
-temperatures $T_{A,L,sky}$ are replaced with brightness matrices $\mathbb{B}_{A,L,sky}$, and $Gk_B$ is instead represented by 
-a system gain matrix $\mathbf{G}$. We have added a transmission matrix for the antenna $\mathbf{A}$, and a transmission
-matrix $\mathbf{L}$ for the load in series with the noise diode. Note that the relation of Eq.~\ref{eq:sky-ant} is now encoded into the 
-ME by the matrix $\mathbf{A}$, and that we have dropped antenna number subscripts as \emph{p}=\emph{q} 
+temperatures $T_{A,L,\rm{sky},\rm{rx}}$ are replaced with brightness matrices $\mathbb{B}_{A,L,\rm{sky},\rm{rx}}$, and $Gk_B$ is instead represented by 
+a system gain matrix $\mathbf{G}$. We have added a transmission matrix for the antenna $\mathbf{T}_A$, and a transmission
+matrix $\mathbf{T}_L$ for the load in series with the noise diode. Note that the relation of Eq.~\ref{eq:sky-ant} is now encoded into the 
+ME by the matrix $\mathbf{T}_A$, and that we have dropped antenna number subscripts as \emph{p}=\emph{q} 
 for autocorrelation measurements.  
 
 It is immediately apparent that the cancellations that occur in the ratio of Eq.~\ref{eq:ant-temp} will not in general occur for 
 the equivalent ratio $\mathbf{R} = (\mathbf{V}_{A}-\mathbf{V}_{L})(\mathbf{V}_{D}-\mathbf{V}_{L})^{-1}$. We can however
 retrieve the result of Eq.~\ref{eq:ant-temp} by treating the two polarizations separately, setting $\mathbf{G} = G\mathbf{I}$
-and $\mathbf{L} = \mathbf{I}$, with $\mathbf{A} = T_{A}(1-|\Gamma|^2)\mathbf{I}$. 
+and $\mathbf{T}_L = \mathbf{I}$, with $\mathbf{T}_A = T_{A}(1-|\Gamma|^2)\mathbf{I}$. 
 
 Our equations Eq.~\ref{eq:switchmat1}-\ref{eq:switchmat3} allow for both polarizations to be treated together, which will be 
 important if cross-polarization terms are non-negligible. Also, we may expand Eq.~\ref{eq:switchmat1} to include ionospheric
-effects. This ability to put all instrumental effects into a single ME may open avenues toward probabilistic data analysis techniques
-such as Markov-chain Monte Carlo (MCMC). 
+effects. This ability to combine all effects into a single ME may simplify data analysis and improve calibration accuracy for such experiments.
 
 \begin{figure*}
 \subfloat[ \label{fig:leda-shc}.]{\includegraphics[width=0.99\columnwidth]{figures-leda-shc}
@@ -1302,7 +1301,7 @@ The fast varying sinusoid can be attributed standing waves along the $\sim$300 m
 
 \subsection{RRIME and Lorentz boosts}
 
-To illustrate how the RRIME can be used to describe relativistic effects, let us first consider the ``simple'' case of a
+To illustrate how the RRIME can be used to describe relativistic effects, let us first consider the `simple' case of a
 relativistically moving source. Suppose we have an unpolarized point source (Table~\ref{tab:BT}), with antennas $p$ and 
 $q$ located in the $xy$ plane perpendicular to the direction of propagation $z$ (so the $K$ component becomes unity), both
 moving parallel to the $x$ axis with velocity $v$. The Lorentz transformation tensor from the signal frame to the antenna
