@@ -79,10 +79,10 @@ $^3$SKA South Africa, 3rd Floor, The Park, Park Road, Pinelands, 7405, South Afr
 
 \begin{document}
 
-\date{Accepted 20XX . Received 2012 Mmm dd}
+\date{Accepted Mmm dd 2015. Received 2014 Mmm dd}
 
 \maketitle
-\pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2012}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2015}
 
 \label{firstpage}
 \begin{abstract}
@@ -143,7 +143,13 @@ The second reformulation is a relativistic-aware formulation of the RIME,
 starting with the electromagnetic field tensor. This formalism allows for relativistic motion to be treated
 as instrumental effect and incorporated into the RIME.
 
-\subsection{Jones and Mueller RIME formulations}
+This article is organized as follows. In Section 2, we review existing formalisms of the RIME and methods from 
+microwave engineering. Section 3 defines coherency matrices, which are used in Section 4 to formulate 
+general coherency relationships for radio astronomy. In Section 5, we introduce a tensor formulation of the RIME based upon
+the electromagnetic tensor from special relativity. Discussion and example applications are given in Section 6;
+concluding remarks are given in Section 7.
+
+\section{Jones and Mueller RIME formulations}
 
 Before continuing on to derive a more general relationship between
 the two-point coherency matrix and the voltage-current coherency,
@@ -171,12 +177,12 @@ system such that z-axis is aligned with the Poynting vector
 Jones calculus dictates that along a signal's path, any (linear) transformation
 can be represented with a Jones matrix, \textbf{\emph{J}}:
 \begin{equation}
-\mbox{\textbf{\emph{e}}}_{out}(\mbox{\textbf{\emph{r}}},t)=\mbox{\textbf{\emph{J}}}\mbox{\textbf{\emph{e}}}_{in}(\mbox{\textbf{\emph{r}}},t)\label{eq:jones-transmission}
+\mbox{\textbf{\emph{e}}}_{\rm{out}}(\mbox{\textbf{\emph{r}}},t)=\mbox{\textbf{\emph{J}}}\mbox{\textbf{\emph{e}}}_{\rm{in}}(\mbox{\textbf{\emph{r}}},t)\label{eq:jones-transmission}
 \end{equation}
 A useful property of Jones calculus is that multiple effects along
 a signal's path of propagation correspond to repeated multiplications:
 \begin{equation}
-\mbox{\textbf{\emph{e}}}_{out}(\mbox{\textbf{\emph{r}}},t)=\emph{\textbf{J}}_{n}\cdots\emph{\textbf{J}}_{2}\emph{\textbf{J}}_{1}\mbox{\textbf{\emph{e}}}_{int}(\mbox{\textbf{\emph{r}}},t),
+\mbox{\textbf{\emph{e}}}_{\mathrm{out}}(\mbox{\textbf{\emph{r}}},t)=\emph{\textbf{J}}_{n}\cdots\emph{\textbf{J}}_{2}\emph{\textbf{J}}_{1}\mbox{\textbf{\emph{e}}}_{\rm{in}}(\mbox{\textbf{\emph{r}}},t),
 \end{equation}
 which can be collapsed into a single matrix when required.
 
@@ -208,7 +214,7 @@ in a cross-correlator.\label{fig:RIME-cartoon}}
 \end{figure}
 
 
-\subsubsection{Hamaker's RIME derivation}
+\subsection{Hamaker's RIME derivation}
 
 The derivation of the RIME is remarkably simple and elegant. For a
 single point source of radiation, the voltages induced at the terminals
@@ -283,7 +289,7 @@ and calibrating radio interferometers was an important step forward
 in radio polarimetry.
 
 
-\subsubsection{The 2$\times$2 RIME}
+\subsection{The 2$\times$2 RIME}
 
 In a later paper, \citet{Hamaker:2000p7625} presents a modified formulation
 of the RIME, where instead of forming the coherency vector from the Kronecker
@@ -330,7 +336,7 @@ result; we return to vC-Z later in this article.
 
 
 
-\subsubsection{A generalized tensor RIME}
+\subsection{A generalized tensor RIME}
 
   In \citet{Smirnov:2011d}, a generalized tensor formalism of the
 RIME is presented. The coherency of two voltages is once again defined
@@ -480,11 +486,11 @@ and $\mbox{\textbf{\emph{N}}}_{pq}$ are called the mixed coherency
 matrices. The subscripts $p$ and $q$ correspond to the spacetime
 points $(\mbox{\textbf{\emph{r}}}_{p},t)$ and $(\mbox{\textbf{\emph{r}}}_{q},t+\tau)$,
 respectively. We may arrange these into a single $\mbox{6}\times\mbox{6}$
-matrix \textbf{$\mathbb{W}_{pq}$} that is equivalent to the time
+matrix \textbf{$\mathbb{B}_{pq}$} that is equivalent to the time
 averaged outer product of the electromagnetic field column vectors
 at spacetime points $(\mbox{\textbf{\emph{r}}}_{p},t)$ and $(\mbox{\textbf{\emph{r}}}_{q},t+\tau)$:
 \begin{equation}
-\mathbb{W}_{pq}=\left\langle \begin{pmatrix}\mbox{\textbf{\emph{e}}}_{p}\\
+\mathbb{B}_{pq}=\left\langle \begin{pmatrix}\mbox{\textbf{\emph{e}}}_{p}\\
 \mbox{\textbf{\emph{h}}}_{p}
 \end{pmatrix}\otimes\begin{pmatrix}\mbox{\textbf{\emph{e}}}_{q}\\
 \mbox{\textbf{\emph{h}}}_{q}
@@ -505,11 +511,10 @@ under Lorentz transformations. These are used in the the analysis
 of electromagnetic field data from spacecraft.
 \item For monochromatic plane waves, when $\mbox{\textbf{\emph{r}}}_{p}=\mbox{\textbf{\emph{r}}}_{q}$
 and $\tau=0$, and we choose a coordinate system with $z$ in the
-direction of propagation (i.e. along the Poynting vector) \textbf{\emph{E}}\textbf{
-}becomes what \citet{Smirnov:2011a} refers to as the \emph{brightness
-matrix}, $\mathsf{B}$. To highlight the relationship between $\mathbb{W}_{00}$
-and the brightness matrix, we use the notation $\mathbb{B}\triangleq\mathbb{W}_{00}$,
-and will refer to $\mathbb{B}$ as the \emph{brightness coherency}.
+direction of propagation (i.e. along the Poynting vector), $\textbf{\emph{E}}_{pq}$ 
+becomes what \citet{Smirnov:2011a} refers to as the \emph{brightness
+matrix}, $\mathsf{B}$. From here forward, we drop the subscript $\mathbb{B}=\mathbb{B}_{00}$ and shall refer to 
+this as the \emph{brightness coherency} to highlight its relationship with $\mathsf{B}$.
 \end{itemize}
 
 
@@ -524,11 +529,11 @@ One may model the analogue components of a telescope as a 6-port network,
 with three inputs ports and three output ports. We propose this so
 that there is an input-output pair of ports for each of the orthogonal
 components of the electromagnetic field. We can then define a set
-of voltages \textbf{\emph{v}}\emph{(t)} and currents $\tilde{\mbox{\textbf{\emph{i}}}}(t)$
+of voltages \textbf{\emph{v}}\emph{(t)} and currents $\mbox{\textbf{\emph{i}}}(t)$
 
 \begin{align}
 \mbox{\textbf{\emph{v}}}(t) & =\begin{pmatrix}v_{x}(t) & v_{y}(t) & v_{z}(t)\end{pmatrix}^{T}\\
-\tilde{\mbox{\textbf{\emph{i}}}}(t) & =\begin{pmatrix}i_{x}(t) & i_{y}(t) & i_{z}(t)\end{pmatrix}^{T}.
+\mbox{\textbf{\emph{i}}}(t) & =\begin{pmatrix}i_{x}(t) & i_{y}(t) & i_{z}(t)\end{pmatrix}^{T}.
 \end{align}
 In practice, most telescopes are single or dual polarization, so only
 the $x$ and $y$ components are sampled. Nonetheless, it is possible
@@ -539,7 +544,7 @@ and the current is linearly related to voltage by Ohm's law, so we
 may write a general linear relationship 
 \begin{equation}
 \begin{pmatrix}\mbox{\textbf{\emph{v}}}(t)\\
-\tilde{\mbox{\textbf{\emph{i}}}}(t)
+\mbox{\textbf{\emph{i}}}(t)
 \end{pmatrix}=\begin{pmatrix}\mbox{\textbf{\emph{A}}} & \mbox{\textbf{\emph{B}}}\\
 \mbox{\textbf{\emph{C}}} & \mathbf{\mbox{\textbf{\emph{D}}}}
 \end{pmatrix}\begin{pmatrix}\mbox{\textbf{\emph{e}}}(\mbox{\textbf{\emph{r}}},t)\\
@@ -554,7 +559,7 @@ block matrices
 
 \begin{align}
 \mbox{\textbf{\emph{V}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{j}^{*}(t)v_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{I}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle i_{j}^{*}(t)i_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
+\mbox{\textbf{\emph{W}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle i_{j}^{*}(t)i_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
 \mbox{\textbf{\emph{K}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{j}^{*}(t)i_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
 \mbox{\textbf{\emph{L}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle i_{j}^{*}(t)v_{k}^{*}(t+\tau)\right\rangle \end{pmatrix},
 \end{align}
@@ -567,11 +572,11 @@ and outputs.%
 $\mathbb{V}_{pq}$ 
 \begin{equation}
 \mathbb{V}_{pq}=\left\langle \begin{pmatrix}\mbox{\textbf{\emph{v}}}_{p}\\
-\tilde{\mbox{\textbf{\emph{i}}}_{p}}
+\mbox{\textbf{\emph{i}}}_{p}
 \end{pmatrix}\otimes\begin{pmatrix}\mbox{\textbf{\emph{v}}}_{q}\\
-\tilde{\mbox{\textbf{\emph{i}}}_{q}}
+\mbox{\textbf{\emph{i}}}_{q}
 \end{pmatrix}\right\rangle =\begin{pmatrix}\mbox{\textbf{\emph{V}}}_{pq} & \mathbf{\mbox{\textbf{\emph{K}}}}_{pq}\\
-\mbox{\textbf{\emph{L}}}_{pq} & \mbox{\textbf{\emph{I}}}_{pq}
+\mbox{\textbf{\emph{L}}}_{pq} & \mbox{\textbf{\emph{W}}}_{pq}
 \end{pmatrix},
 \end{equation}
 which we will refer to as the \emph{voltage-current coherency matrix}.
@@ -582,7 +587,7 @@ of \citet{Smirnov:2011a}.
 
 \section{Two point coherency relationships\label{sec:2pt-coherency}}
 
-Now we have introduced the two-point coherency matrix $\mathbb{W}_{pq}$
+Now we have introduced the two-point coherency matrix $\mathbb{B}_{pq}$
 and the voltage-current coherency matrix $\mathbb{V}_{pq}$, we can
 formulate relationships between the two. In this section, we first
 formulate a general coherency relationship describing propagation
@@ -605,11 +610,11 @@ matrices, $\mathbb{T}_{p}$ and $\mathbb{T}_{q}$:
 \mbox{\textbf{\emph{f}}}_{q} & =\mathbb{T}_{q}\mbox{\textbf{\emph{f}}}_{0}
 \end{align}
 The coherency between the two signals $\mbox{\textbf{\emph{f}}}_{p}$
-and $\mbox{\textbf{\emph{f}}}_{q}$ is then given by the matrix $\mathbb{W}_{pq}$:
+and $\mbox{\textbf{\emph{f}}}_{q}$ is then given by the matrix $\mathbb{B}_{pq}$:
 
 
 \begin{align}
-\mathbb{W}_{pq} & =\left\langle \mbox{\textbf{\emph{f}}}_{p}\otimes\mbox{\textbf{\emph{f}}}_{q}\right\rangle \label{eq:tp_tq_outer}\\
+\mathbb{B}_{pq} & =\left\langle \mbox{\textbf{\emph{f}}}_{p}\otimes\mbox{\textbf{\emph{f}}}_{q}\right\rangle \label{eq:tp_tq_outer}\\
  & =\left\langle (\mathbb{T}_{p}\mbox{\textbf{\emph{f}}}_{0})\otimes(\mathbf{\mathbb{T}}_{q}\mbox{\textbf{\emph{f}}}_{0})\right\rangle \\
  & =\left\langle \mathbf{\mathbb{T}}_{p}(\mbox{\textbf{\emph{f}}}_{0}\otimes\mbox{\textbf{\emph{f}}}_{0})\mathbb{T}_{q}^{H}\right\rangle \\
  & =\mathbf{\mathbb{T}}_{p}\mathbb{B}\mathbf{\mathbb{T}}_{q}^{H}
@@ -1061,9 +1066,9 @@ remarkable illustration of how these fields are intrinsically related by underly
 
 Indeed, it has 
 long been known that Jones and Mueller transformation matrices are  
-related to Lorentz transformations by the Lorentz group. As discussed in  \citet{Barakat:1963},
+related to Lorentz transformations by the Lorentz group. 
 Wiener was aware as early as 1928 that the the 2$\times$2 coherency matrix could be written in terms of the 
-Pauli spin matrices. More recently, \citet{Baylis:1993} presents a more general geometric algebra formalism 
+Pauli spin matrices \citep{wiener1928, wiener1930}. More recently, \citet{Baylis:1993} presents a more general geometric algebra formalism 
 that unifies Jones and Mueller matrices with Stokes parameters and the Poincar\'{e} sphere. 
 \citet{Han:1997jones} show that the Jones formalism is a representation of the six-parameter 
 Lorentz group; further to this \citet{Han:1997stokes} show that the Stokes parameters form a Minkowskian 
@@ -1439,7 +1444,7 @@ Conceptually, the latter example is very similar to the transmission matrix form
 current components intermix, the voltage-only Jones formalism no longer applies, and a formalism incorporating both 
 components must be invoked.
 
-\subsection{Conclusions}
+\section{Conclusions}
 
 The radio interferometer Measurement Equation provides a powerful
 framework for describing a signal's journey from an astrophysical
