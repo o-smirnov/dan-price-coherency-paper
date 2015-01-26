@@ -304,8 +304,8 @@ outer product ($\otimes$):
 Stokes parameters by $\mbox{\textbf{\emph{E}}}_{00}=\mbox{ \textsf{B} }$,
 where 
 \begin{align}
-\mathsf{B} & =\begin{pmatrix}I+Q & U+iV\\
-U-iV & I-Q
+\mathsf{B} & =\begin{pmatrix}I+Q & U+jV\\
+U-jV & I-Q
 \end{pmatrix}.
 \end{align}
 The equivalent to the RIME of Eq.~\ref{eq:mueller-rime} is 
@@ -474,12 +474,12 @@ vectors at a spacetime point $(\mbox{\textbf{\emph{r}}},t)$:
 \end{align}
 The coherency matrices are then defined by the formulae
 \begin{align}
-\mbox{\textbf{\emph{E}}}_{pq}(\mbox{\textbf{\emph{r}}}_{p},\mbox{\textbf{\emph{r}}}_{q},\tau) & =\begin{pmatrix}\left\langle e_{j}^{*}(\mbox{\textbf{\emph{r}}}_{p},t)e_{k}^{*}(\mbox{\textbf{\emph{r}}}_{q},t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{H}}}_{pq}(\mbox{\textbf{\emph{r}}}_{p},\mbox{\textbf{\emph{r}}}_{q},\tau) & =\begin{pmatrix}\left\langle h_{j}^{*}(\mbox{\textbf{\emph{r}}}_{p},t)h_{k}^{*}(\mbox{\textbf{\emph{r}}}_{q},t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{M}}}_{pq}(\mbox{\textbf{\emph{r}}}_{p},\mbox{\textbf{\emph{r}}}_{q},\tau) & =\begin{pmatrix}\left\langle e(\mbox{\textbf{\emph{r}}}_{p},t)h_{k}^{*}(\mbox{\textbf{\emph{r}}}_{q},t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{N}}}_{pq}(\mbox{\textbf{\emph{r}}}_{p},\mbox{\textbf{\emph{r}}}_{q},\tau) & =\begin{pmatrix}\left\langle h_{j}^{*}(\mbox{\textbf{\emph{r}}}_{p},t)e_{k}^{*}(\mbox{\textbf{\emph{r}}}_{q},t+\tau)\right\rangle \end{pmatrix}.
+\mbox{\textbf{\emph{E}}}_{pq}(\mbox{\textbf{\emph{r}}}_{p},\mbox{\textbf{\emph{r}}}_{q},\tau) & =\begin{pmatrix}\left\langle e_{k}(\mbox{\textbf{\emph{r}}}_{p},t)e_{l}^{*}(\mbox{\textbf{\emph{r}}}_{q},t+\tau)\right\rangle \end{pmatrix}\\
+\mbox{\textbf{\emph{H}}}_{pq}(\mbox{\textbf{\emph{r}}}_{p},\mbox{\textbf{\emph{r}}}_{q},\tau) & =\begin{pmatrix}\left\langle h_{k}(\mbox{\textbf{\emph{r}}}_{p},t)h_{l}^{*}(\mbox{\textbf{\emph{r}}}_{q},t+\tau)\right\rangle \end{pmatrix}\\
+\mbox{\textbf{\emph{M}}}_{pq}(\mbox{\textbf{\emph{r}}}_{p},\mbox{\textbf{\emph{r}}}_{q},\tau) & =\begin{pmatrix}\left\langle e_{k}(\mbox{\textbf{\emph{r}}}_{p},t)h_{l}^{*}(\mbox{\textbf{\emph{r}}}_{q},t+\tau)\right\rangle \end{pmatrix}\\
+\mbox{\textbf{\emph{N}}}_{pq}(\mbox{\textbf{\emph{r}}}_{p},\mbox{\textbf{\emph{r}}}_{q},\tau) & =\begin{pmatrix}\left\langle h_{k}(\mbox{\textbf{\emph{r}}}_{p},t)e_{l}^{*}(\mbox{\textbf{\emph{r}}}_{q},t+\tau)\right\rangle \end{pmatrix}.
 \end{align}
-Here, $j$ and $k$ are indices representing the $x,y,z$ subscripts
+Here, $k$ and $l$ are indices representing the $x,y,z$ subscripts
 from Cartesian coordinates. $\mbox{\textbf{\emph{E}}}_{pq}$ and $\mbox{\textbf{\emph{H}}}_{pq}$
 are called the electric and the magnetic coherency matrices, and $\mbox{\textbf{\emph{M}}}_{pq}$
 and $\mbox{\textbf{\emph{N}}}_{pq}$ are called the mixed coherency
@@ -560,10 +560,10 @@ matrix of voltage-current coherency statistics that consists of the
 block matrices
 
 \begin{align}
-\mbox{\textbf{\emph{V}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{j}^{*}(t)v_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{W}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle i_{j}^{*}(t)i_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{K}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{j}^{*}(t)i_{k}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
-\mbox{\textbf{\emph{L}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle i_{j}^{*}(t)v_{k}^{*}(t+\tau)\right\rangle \end{pmatrix},
+\mbox{\textbf{\emph{V}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{k}(t)v_{l}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
+\mbox{\textbf{\emph{W}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle i_{k}(t)i_{l}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
+\mbox{\textbf{\emph{K}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle v_{k}(t)i_{l}^{*}(t+\tau)\right\rangle \end{pmatrix}\\
+\mbox{\textbf{\emph{L}}}_{pq}(\tau) & =\begin{pmatrix}\left\langle i_{k}(t)v_{l}^{*}(t+\tau)\right\rangle \end{pmatrix},
 \end{align}
 these are analogous to (and related to)\textbf{ }the electromagnetic
 coherency matrices above%
@@ -778,10 +778,10 @@ which for a monochromatic plane wave is equal to
 (e_x,e_y,-e_y/c_0,e_x/c_0)^T = 
 \begin{pmatrix}\bmath{e}\\ \bmath{F}\bmath{e}\end{pmatrix}, 
 \end{equation}
-and the output of the system is a 4-vector of 2 voltages and 2 currents $(\bmath{v}_p,\tilde{\bmath{i}}_p)^T$, which is
+and the output of the system is a 4-vector of 2 voltages and 2 currents $(\bmath{v}_p,\bmath{i}_p)^T$, which is
 linear with respect to the input:
 \begin{equation}
-\begin{pmatrix}\bmath{v}_p\\ \tilde{\bmath{i}}_p\end{pmatrix} =
+\begin{pmatrix}\bmath{v}_p\\ \bmath{i}_p\end{pmatrix} =
 \begin{pmatrix}\bmath{A}_p & \bmath{B}_p\\ \bmath{C}_p & \bmath{D}_p \end{pmatrix} 
 \begin{pmatrix}\bmath{e}\\ \bmath{F}\bmath{e}\end{pmatrix}.
 \end{equation}
@@ -810,7 +810,7 @@ i.e.
 This, however, completely neglects the current transmission properties. Applying the 2N-port transmission matrix 
 formalism, we can see the difference:
 \begin{equation}
-\begin{pmatrix}\bmath{v}_p\\ \tilde{\bmath{i}}_p\end{pmatrix} =
+\begin{pmatrix}\bmath{v}_p\\ \bmath{i}_p\end{pmatrix} =
 \begin{pmatrix}\bmath{A}_{2p} & \bmath{B}_{2p}\\ \bmath{C}_{2p} & \bmath{D}_{2p} \end{pmatrix} 
 \begin{pmatrix}\bmath{A}_{1p} & \bmath{B}_{1p}\\ \bmath{C}_{1p} & \bmath{D}_{1p} \end{pmatrix} 
 \begin{pmatrix}\bmath{e}\\ \bmath{F}\bmath{e}\end{pmatrix},
